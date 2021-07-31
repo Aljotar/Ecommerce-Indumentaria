@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Rolling Clothing</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#">Coleccion</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">Locales</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-person usuario_logo" viewBox="0 0 16 16">
+                            <path
+                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                        </svg></li>
+                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                                class="bi bi-bag mb-3" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                            </svg></a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+    <div class="home"></div>
+
+    <section class="informativa mt-5">
+
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex mt-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-truck" viewBox="0 0 16 16">
+                        <path
+                            d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                    </svg>
+                    <p class="p-3">Envíos a todo el país</p>
+                </div>
+                <div class="col d-flex mt-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-shield-check" viewBox="0 0 16 16">
+                        <path
+                            d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" />
+                        <path
+                            d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    </svg>
+                    <p class="p-3">Compra protegida</p>
+                </div>
+                <div class="col d-flex mt-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-credit-card" viewBox="0 0 16 16">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z" />
+                        <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z" />
+                    </svg>
+                    <p class="p-3">Todos los medios de pago</p>
+                </div>
+                <div class="col d-flex mt-4 p-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor"
+                        class="bi bi-house" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                        <path fill-rule="evenodd"
+                            d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                    </svg>
+                    <p class="p-3">Quedate en casa, nosotros te lo llevamos</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <div class="shell">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img">
+                            <img src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/4/4/44d0003010502_2.jpg"
+                                alt="Product" class="img-responsive" />
+                        </div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <button type="button" class="btn btn-primary compra">Comprar</button>
+                            </div>
+                            <div class="title-product">
+                                <h3>Sweater regular fit</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>Sweater tramado Melange escote redondo, calce regular fit.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">$5.899</span></div>
+                                <a href="#" class="link-primary">Añadir a lista de deseos</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img
+                                src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/8/0/80d000019-035_2.jpg"
+                                alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                            <div class="title-product">
+                                <h3>Sobretodo Liso de Paño </h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>Sobretodo liso de paño. Con tres botones en el frente. Con bolsillos
+                                    laterales.Sobretodo Liso de Paño </p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">$17.499</span></div>
+                                <a href="#" class="link-primary">Añadir a lista de deseos</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img
+                                src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/0/1/01d000094-002_10_1_1.jpg"
+                                alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                            <div class="title-product">
+                                <h3>Campera Matelaseada</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>Campera de nylon matelaseada con capucha desmontable y escudo Devré en manga
+                                    izquierda. Relleno sintético. Regular Fit</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">$7.499</span></div>
+                                <a href="#" class="link-primary">Añadir a lista de deseos</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img
+                                src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/4/4/44d000255-017-camisa-vestir-2_2.jpg"
+                                alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                            <div class="title-product">
+                                <h3>Camisa de Vestir Lisa Slim Fit</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>Camisa de vestir lisa de calce slim fit. Con cuello tipo noche. Composición 100%
+                                    Algodón.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">$4.499</span></div>
+                                <a href="#" class="link-primary">Añadir a lista de deseos</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img">
+                            <img src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/6/0/60d000105-001_3_1_2.jpg"
+                                alt="Product" class="img-responsive" />
+                        </div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                            <div class="title-product">
+                                <h3>Cardigan de calce regular.</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>Cardigan de calce regular liso con botones. De algodón, suave.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">$12.999</span></div>
+                                <a href="#" class="link-primary">Añadir a lista de deseos</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img
+                                src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/0/2/02d000097-001_3.jpg"
+                                alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                            <div class="title-product">
+                                <h3>Saco Slim Fit</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>Saco fantasía con puño de manga de cuatro botones. Corte Slim Fit. Cuello con ojal y
+                                    cierre con dos botones</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">$5.899</span></div>
+                                <a href="#" class="link-primary">Añadir a lista de deseos</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img
+                                src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/0/8/08d000044-002-pantal_n-de-vestir-3_2.jpg"
+                                alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                            <div class="title-product">
+                                <h3>Pantalón de Vestir Liso Slim Fit</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>Pantalón liso sin pinzas. Corte Slim Fit. Cierre con cremallera oculta y botón. Dos
+                                    bolsillos laterales y dos abotonados en la parte posterior.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">$5.499</span></div>
+                                <a href="#" class="link-primary">Añadir a lista de deseos</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="p-5">
+        <div class="row">
+            <div class="col">
+                <div class="card text-white card-estilo">
+                    <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/themes/amazonas/img-1723215904-1616443892-4c1075d9f0f140097df5d7d4a903b77d1616443892.png?2047985143"
+                        class="card-img" alt="...">
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-white card-estilo">
+                    <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/themes/amazonas/img-624918067-1616443893-4a01034eb106de1a4f3c72df62b13a301616443894.png?2047985143"
+                        class="card-img" alt="...">
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-white card-estilo">
+                    <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/themes/amazonas/img-1462663874-1616443895-8f98059a8bc0b8ab7ae0a9d5afb234de1616443895.png?2047985143"
+                        class="card-img" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <script src="carrousel.js"></script>
+
+    <!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+    <script src="js/scripts.js"></script>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
