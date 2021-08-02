@@ -44,22 +44,19 @@ body {
 
 .logo {
     font-family: "lato", sans-serif;
-    animation: logo 2s ease;
 }
 
 @keyframes logo {
     from {
         transform: translateY(200px) scale(1.9);
-        
-    }  
+    }
     70% {
         transform: translateY(110px) scale(1.4);
     }
-    100%{
+    100% {
         color: white;
     }
 }
-
 
 .nav div.main_list {
     height: 65px;
@@ -75,22 +72,20 @@ body {
     padding: 0;
 }
 
-.nav div.main_list ul li {
+.nav_menu li {
     width: auto;
     height: 65px;
     padding: 0;
     padding-right: 3rem;
-    animation: nav_ani 2s ease;
 }
-@keyframes nav_ani{
-    0%{
-        opacity: 0;
-
-    }
-    80%{
+@keyframes nav_ani {
+    0% {
         opacity: 0;
     }
-    100%{
+    80% {
+        opacity: 0;
+    }
+    100% {
         opacity: 1;
     }
 }
@@ -100,7 +95,6 @@ body {
     color: rgb(255, 255, 255);
     line-height: 65px;
     font-size: 2.4rem;
-    
 }
 
 .nav div.main_list ul li a:hover {
@@ -416,6 +410,7 @@ body {
     position: relative;
     margin: 20px auto;
 }
+
 .wsk-cp-img {
     position: absolute;
     top: 5px;
@@ -551,14 +546,6 @@ a.buy-btn {
     border: 1px solid #212121;
     transition: all 0.2s ease-in-out;
 }
-a.buy-btn:hover,
-a.buy-btn:active,
-a.buy-btn:focus {
-    border-color: #ff9800;
-    background: #ff9800;
-    color: #fff;
-    text-decoration: none;
-}
 .wsk-btn {
     display: inline-block;
     color: #212121;
@@ -570,12 +557,6 @@ a.buy-btn:focus {
     padding: 12px 30px;
     border-radius: 27px;
     margin: 0 5px;
-}
-.wsk-btn:hover,
-.wsk-btn:focus,
-.wsk-btn:active {
-    text-decoration: none;
-    color: #fff;
 }
 .red {
     color: #f44336;
@@ -628,6 +609,49 @@ a.buy-btn:focus {
 .card2-estilo img:hover {
     opacity: 0.7;
     transform: scale(1.02);
+}
+@keyframes ani_product {
+    0%{
+        transform: translate(-300px, 0);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+    
+}
+@keyframes ani_product1 {
+    0%{
+        transform: translate(0, 200px);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+    
+}
+@keyframes ani_product2 {
+    0%{
+        transform: translate(300px, 0);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+    
+}
+@keyframes ani_card {
+    0%{
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
 }
 .titulo {
     font-size: 30px;
@@ -721,4 +745,3 @@ a.buy-btn:focus {
     color: rgb(58, 57, 57);
     transform: scale(1.08);
 }
-
