@@ -21,9 +21,9 @@ function menu() {
 window.addEventListener('scroll', function () {
     let animacionProduct = document.querySelector('.card-estilo');
     let animacion = animacionProduct.getBoundingClientRect().top;
-    let animacionProduct1 = document.querySelector('.card-estilo2');
+    let animacionProduct1 = document.getElementById('card-estilo2');
     let animacion2 = animacionProduct1.getBoundingClientRect().top;
-    let animacionProduct2 = document.querySelector('.card-estilo3');
+    let animacionProduct2 = document.getElementById('card-estilo3');
     let animacion3 = animacionProduct2.getBoundingClientRect().top;
     let animacionProduct3 = document.querySelector('.card2-estilo');
     let animacion4 = animacionProduct3.getBoundingClientRect().top;
