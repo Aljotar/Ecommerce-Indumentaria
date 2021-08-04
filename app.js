@@ -5,15 +5,16 @@ $('.navTrigger').click(function () {
     $("#mainListDiv").fadeIn();
 
 });
-
 window.addEventListener("DOMContentLoaded", mostrar);
 function mostrar() {
     let animacion = document.querySelector('.logo');
-    animacion.style.animation = 'logo 2s ease'
+    animacion.style.animation = 'logo 2s ease';
+
 }
 window.addEventListener("DOMContentLoaded", menu);
 function menu() {
     let animacion = document.querySelector('.nav_menu');
+
     //console.log(posicionXbox1);
     //let tamañoPantalla = window.innerHeight;
     animacion.style.animation = 'nav_ani 2s ease'
@@ -52,3 +53,28 @@ window.addEventListener('scroll', function () {
         animacionProduct5.style.animation = 'ani_card 1.5s ease-out'
     }
 })
+ 
+const menuInterno = document.getElementById("menu2");
+const menu_interno = document.querySelector(".menu_interno")
+const menu3 = document.querySelector(".menu3");
+menuInterno.addEventListener('mouseover',mostrarMenu)
+function mostrarMenu() {
+    menu_interno.classList.add("d-block");
+    menu_interno.classList.remove("d-none");
+}
+menu_interno.addEventListener('mouseleave',ocultarMenu)
+function ocultarMenu() {
+    menu_interno.classList.remove("d-block");
+    menu_interno.classList.add("d-none");
+}
+menu3.addEventListener('mouseleave',ocultarMenu)
+function ocultarMenu() {
+    menu_interno.classList.remove("d-block");
+    menu_interno.classList.add("d-none");
+}
+
+
+
+
+
+

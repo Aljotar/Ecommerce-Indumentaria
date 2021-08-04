@@ -39,16 +39,22 @@ body {
 }
 
 .nav div.logo a:hover {
-    color: #024685;
+    color: #ffffff;
 }
+
 
 .logo {
     font-family: "lato", sans-serif;
 }
+.nav div.logo svg{
+    color: rgb(245, 0, 0, 0.8);
+    animation: nav_ani 2.4s ease-out;
+}
+
 
 @keyframes logo {
     from {
-        transform: translateY(200px) scale(1.9);
+        transform: translateY(250px) scale(1.9);
     }
     70% {
         transform: translateY(110px) scale(1.4);
@@ -98,8 +104,60 @@ body {
 }
 
 .nav div.main_list ul li a:hover {
-    color: #0077e6;
+    color: #ff3b3b;
 }
+
+.menu_interno{
+    width: 100%;
+    margin-top: 65px;
+    height: 400px;
+    box-shadow: 1px 1px 2px rgb(34, 34, 34);
+    background: white;
+    list-style: none;
+    position: fixed;
+    z-index: 1;
+}
+.menu_interno1{
+    border-right: 0.5px solid rgb(156, 156, 156);
+    border-left: 0.5px solid rgb(156, 156, 156);
+    margin-top: 10px;
+}
+.home ul div div div ul{
+    list-style: none;
+
+}
+.home ul div div div ul li{
+    color: rgb(29, 29, 29);
+    font-family: sans-serif;
+    font-size: 15px;
+    margin: 30px;
+    font-weight: 900;
+    border-bottom: 1px solid rgb(82, 81, 81); 
+}
+.home ul div div div ul li:hover{
+    color: rgb(250, 59, 59);
+ 
+}
+.destacados{
+    color: rgb(49, 47, 47);
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+    margin: 10px;
+    border-bottom: 0.1px solid black;
+
+}
+.eliminar_carrito{
+    color: red;
+}
+
+
+
+
+
+
+
+
 
 /* Home section */
 
@@ -109,6 +167,7 @@ body {
     background-image: url(./imagenes/sale-70off-2da_seleccionados_dvr_home_slide_2000x1106_px_1.jpg);
     background-position: center top;
     background-size: cover;
+    box-shadow: 1px 1px 5px rgb(109, 109, 109);
 }
 
 .navTrigger {
@@ -132,7 +191,7 @@ body {
     color: rgb(255, 255, 255);
 }
 .usuario_logo:hover {
-    color: #0077e6;
+    color: #fa5656;
 }
 
 /* Media qurey section */
@@ -384,7 +443,9 @@ body {
 
 .informativa {
     height: 120px;
-    background: #e5e5e5;
+    background: #d4d4d4;
+    border-top: 0.5px solid rgb(175, 174, 174);
+    box-shadow: 1px 1px 5px rgb(145, 145, 145);
 }
 .informativa p {
     color: #8b8b8b;
@@ -667,8 +728,9 @@ a.buy-btn {
 
 .informacion {
     height: 150px;
-    background: #eee;
-    box-shadow: 1px 1px 2px rgb(82, 81, 81);
+    background: rgb(207, 206, 206);
+    box-shadow: 1px 1px 5px rgb(156, 155, 155);
+    border-top: 0.5px solid rgb(192, 190, 190);
 }
 .alineado {
     align-items: baseline;
@@ -745,3 +807,7 @@ a.buy-btn {
     color: rgb(58, 57, 57);
     transform: scale(1.08);
 }
+
+
+
+
