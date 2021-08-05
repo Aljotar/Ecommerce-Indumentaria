@@ -53,25 +53,56 @@ window.addEventListener('scroll', function () {
         animacionProduct5.style.animation = 'ani_card 1.5s ease-out'
     }
 })
- 
+
 const menuInterno = document.getElementById("menu2");
 const menu_interno = document.querySelector(".menu_interno")
 const menu3 = document.querySelector(".menu3");
-menuInterno.addEventListener('mouseover',mostrarMenu)
+menuInterno.addEventListener('mouseover', mostrarMenu)
 function mostrarMenu() {
     menu_interno.classList.add("d-block");
     menu_interno.classList.remove("d-none");
 }
-menu_interno.addEventListener('mouseleave',ocultarMenu)
+menu_interno.addEventListener('mouseleave', ocultarMenu);
 function ocultarMenu() {
     menu_interno.classList.remove("d-block");
     menu_interno.classList.add("d-none");
 }
-menu3.addEventListener('mouseleave',ocultarMenu)
+menu3.addEventListener('mouseleave', ocultarMenu);
 function ocultarMenu() {
     menu_interno.classList.remove("d-block");
     menu_interno.classList.add("d-none");
 }
+const login = document.querySelector(".login")
+const userLogin = document.querySelector(".usuario_logo");
+userLogin.addEventListener('mouseover', mostrarLogin);
+function mostrarLogin() {
+    login.classList.remove("d-none");
+    login.classList.add("d-block");
+}
+const loginInterno = document.getElementById("carrito");
+
+loginInterno.addEventListener('mouseenter', ocultarMenu);
+function ocultarMenu() {
+    login.classList.remove("d-block");
+    login.classList.add("d-none");
+}
+const loginInterno1 = document.getElementById("contacto");
+loginInterno1.addEventListener('mouseenter', ocultarMenu);
+function ocultarMenu() {
+    login.classList.remove("d-block");
+    login.classList.add("d-none");
+}
+login.addEventListener('mouseleave', ocultarMenu);
+function ocultarMenu() {
+    login.classList.remove("d-block");
+    login.classList.add("d-none");
+}
+
+
+
+
+
+
 
 
 

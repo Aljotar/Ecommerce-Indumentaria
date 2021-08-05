@@ -42,15 +42,13 @@ body {
     color: #ffffff;
 }
 
-
 .logo {
     font-family: "lato", sans-serif;
 }
-.nav div.logo svg{
+.nav div.logo svg {
     color: rgb(245, 0, 0, 0.8);
     animation: nav_ani 2.4s ease-out;
 }
-
 
 @keyframes logo {
     from {
@@ -107,7 +105,7 @@ body {
     color: #ff3b3b;
 }
 
-.menu_interno{
+.menu_interno {
     width: 100%;
     margin-top: 65px;
     height: 400px;
@@ -117,47 +115,226 @@ body {
     position: fixed;
     z-index: 1;
 }
-.menu_interno1{
+.menu_interno1 {
     border-right: 0.5px solid rgb(156, 156, 156);
     border-left: 0.5px solid rgb(156, 156, 156);
     margin-top: 10px;
 }
-.home ul div div div ul{
+.home ul div div div ul {
     list-style: none;
-
 }
-.home ul div div div ul li{
+.home ul div div div ul li {
     color: rgb(29, 29, 29);
     font-family: sans-serif;
     font-size: 15px;
     margin: 30px;
     font-weight: 900;
-    border-bottom: 1px solid rgb(82, 81, 81); 
+    border-bottom: 1px solid rgb(82, 81, 81);
 }
-.home ul div div div ul li:hover{
+.home ul div div div ul li:hover {
     color: rgb(250, 59, 59);
- 
 }
-.destacados{
+.destacados {
     color: rgb(49, 47, 47);
     font-family: sans-serif;
     font-size: 15px;
     font-weight: 900;
     margin: 10px;
     border-bottom: 0.1px solid black;
-
 }
-.eliminar_carrito{
+.eliminar_carrito {
     color: red;
 }
 
+/*    ----------------    Login -----------------     */
 
+.signin {
+    background-color: #d3d3d3;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
 
+.login {
+    position: absolute;
+    display: none;
+    left: 70.8%;
+    top: 6.7%;
+    height: 470px;
+    width: 350px;
+    margin: auto;
+    padding: 60px 60px;
+    background: url(./imagenes/istockphoto-1152825118-170667a.jpg) no-repeat center center #505050;
+    background-size: cover;
+    box-shadow: 1px 1px 5px #000;
+    border-bottom: 0.5px solid #afafaf;
+    border-radius: 0px 0px 23px 23px;
+    position: fixed;
+    z-index: 1;
+}
 
+.login form {
+    padding-top: 80px;
+}
 
+.login .active {
+    color: rgb(36, 35, 35);
+    font-weight: 700;
+}
+.login .active:hover {
+    border-bottom: 2px solid #4b1102;
+}
 
+.login .nonactive {
+    color: rgb(70, 0, 0);
+    font-weight: 700;
+}
+.login .nonactive:hover {
+    border-bottom: 2px solid #ffffff;
+}
 
+.login h2 {
+    padding-left: 10px;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    font-weight: 100;
+}
 
+.login h2:first-child {
+    padding-left: 0px;
+}
+
+.login span {
+    color: white;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+    top: -65px;
+    transition: all 0.5s ease-in-out;
+}
+
+.login .text {
+    border: none;
+    width: 89%;
+    padding: 10px 20px;
+    display: block;
+    height: 15px;
+    border-radius: 20px;
+    background: rgba(250, 250, 250);
+    border: 2px solid rgba(255, 255, 255, 0);
+    overflow: hidden;
+    margin-top: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+.login .text:focus {
+    outline: 0;
+    border: 2px solid rgb(121, 121, 121);
+    border-radius: 20px;
+    background: rgb(221, 221, 221);
+}
+
+.login .text:focus + span {
+    opacity: 0.8;
+    color: rgb(255, 255, 255);
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    font-family: "Montserrat", sans-serif;
+    color: rgb(14, 14, 14);
+}
+
+.login input {
+    display: inline-block;
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+.login .custom-checkbox {
+    margin-left: 20px;
+}
+
+.login .custom-checkbox {
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    -webkit-appearance: none;
+    background-color: rgba(37, 33, 33, 0.5);
+    padding: 8px;
+    border-radius: 2px;
+    display: inline-block;
+    position: relative;
+    top: 6px;
+}
+
+.custom-checkbox:checked {
+    background-color: rgb(85, 0, 0);
+}
+
+.custom-checkbox:checked:after {
+    content: "\2714";
+    font-size: 10px;
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    color: rgb(255, 255, 255);
+}
+
+.custom-checkbox:focus {
+    outline: none;
+}
+
+.login label {
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.signin {
+    background-color: #8f2d2d;
+    color: #fff;
+    width: 100%;
+    padding: 10px 20px;
+    display: block;
+    height: 39px;
+    border-radius: 20px;
+    margin-top: 30px;
+    transition: all 0.5s ease-in-out;
+    border: none;
+    text-transform: uppercase;
+}
+
+.signin:hover {
+    background: #da0a0a;
+    box-shadow: 0px 4px 35px -5px #ffffff;
+    cursor: pointer;
+}
+
+.signin:focus {
+    outline: none;
+}
+
+.login hr {
+    border: 1px solid rgba(253, 8, 8);
+    top: 85px;
+    position: relative;
+}
+
+.login a {
+    text-align: center;
+    display: block;
+    top: 120px;
+    position: relative;
+    text-decoration: none;
+    color: rgb(248, 0, 0);
+}
+/*    ----------------   -----------------     */
 
 /* Home section */
 
@@ -189,6 +366,7 @@ body {
 }
 .usuario_logo {
     color: rgb(255, 255, 255);
+    margin-left: 10px;
 }
 .usuario_logo:hover {
     color: #fa5656;
@@ -672,37 +850,34 @@ a.buy-btn {
     transform: scale(1.02);
 }
 @keyframes ani_product {
-    0%{
+    0% {
         transform: translate(-300px, 0);
     }
 
     50% {
         transform: translate(0, 0);
     }
-    
 }
 @keyframes ani_product1 {
-    0%{
+    0% {
         transform: translate(0, 200px);
     }
 
     50% {
         transform: translate(0, 0);
     }
-    
 }
 @keyframes ani_product2 {
-    0%{
+    0% {
         transform: translate(300px, 0);
     }
 
     50% {
         transform: translate(0, 0);
     }
-    
 }
 @keyframes ani_card {
-    0%{
+    0% {
         opacity: 0;
     }
 
@@ -712,7 +887,6 @@ a.buy-btn {
     100% {
         opacity: 1;
     }
-    
 }
 .titulo {
     font-size: 30px;
@@ -807,7 +981,3 @@ a.buy-btn {
     color: rgb(58, 57, 57);
     transform: scale(1.08);
 }
-
-
-
-
