@@ -20,143 +20,73 @@
 
 <body>
 
-    <header>
-
-
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1D1D1B;">
-            <div class="container-fluid">
-                <div>
-                    <img src="/imagenes/logo.png" alt="">
-                </div>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+    <a class="nonactive" href="/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-left m-5 back"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+    </svg></a>
+    <div class="container">
+        <div class="logo d-flex">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-code"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z" />
+                </svg></p>
+            <a href="#">Rolling Clothing</a>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                    class="bi bi-code-slash" viewBox="0 0 16 16">
+                    <path
+                        d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                </svg></p>
+        </div>
+        <h1 class="text-center">Registro</h1>
+        <form class="registration-form" id="form">
+            <label class="col-one-half">
+                <span class="label-text">NOMBRE</span>
+                <input type="text" name="" id="nombre">
+            </label>
+            <label class="col-one-half">
+                <span class="label-text">APELLIDO</span>
+                <input type="text" id="apellido">
+            </label>
+            <label>
+                <span class="label-text">Usuario</span>
+                <input type="text" id="floatingInput2">
+            </label>
+            <label>
+                <span class="label-text">Email</span>
+                <input type="email" name="" aria-describedby="emailHelp" id="floatingInput">
+            </label>
+            <label class="password">
+                <span class="label-text">Contraseña</span>
+                <button class="toggle-visibility" title="toggle password visibility" tabindex="-1">
+                    <span class="glyphicon glyphicon-eye-close"></span>
                 </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2">
-                        <a class="navbar-brand" href="/index.html">Inicio</a>
-                        <a class="navbar-brand" href="./nosotros/nosotros.html.html">Nosotros</a>
-
-                    </ul>
+                <input type="password" id="floatingPassword">
+            </label>
+            <label class="checkbox">
+                <input type="checkbox">
+                <span>Quiero recibir las mejores ofertas.</span>
+            </label>
+            <div class="text-center boton_registro">
+                <button type="submit" class="submit" id="boton">Registrar</button>
+                <p class="warnings" id="error"></p>
+                <div class="alert alert-success d-none" role="alert" id="alerta">
+                    Bienvenido a Rolling Clothing
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-code alerta" viewBox="0 0 16 16">
+                        <path
+                            d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z" />
+                    </svg>
                 </div>
             </div>
-        </nav>
-    </header>
+    </div>
+    </form>
+    </div>
 
 
-    <section class="registro">
-
-        <form class="formulario container p-4" autocomplete="off">
-            <div class="row formulario_estilo">
-                <div class="alert alert-warning alert-dismissible fade show d-none" role="alert">
-                    <strong>Registro confirmado!</strong> Gracias por formar parte de Leroy.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                <h3 class="text-white">CREAR TU CUENTA</h3>
-                <div class="col-10">
-                    <div class="form-floating mb-3 text-white">
-                        <input type="email" class="form-control text-white" id="floatingInput"
-                            placeholder="name@example.com" style="background-color: #32353c;border: none;">
-                        <label for="floatingInput">Dirección de correo electrónico</label>
-                    </div>
-                    <div class="form-floating text-white">
-                        <input type="text" class="form-control text-white" id="floatingInput2"
-                            placeholder="name@example.com" required style="background-color: #32353c;border: none">
-                        <label for="floatingInput">Usuario</label>
-                    </div>
-                    <div class="form-floating text-white mt-3">
-                        <input type="password" class="form-control text-white" id="floatingPassword"
-                            placeholder="Password" style="background-color: #32353c;border: none">
-                        <label for="floatingPassword">Ingresar contraseña</label>
-                    </div>
-                </div>
-                <div class="col-10 text-white mt-4">
-                    <p>País de residencia</p>
-                    <select class="form-select text-white" aria-label="Default select example"
-                        style="background-color: #32353c;border: none">
-                        <option selected>Afganistán</option>
-                        <option value="1">Argelia</option>
-                        <option value="2">Argentina</option>
-                        <option value="3">Bolivia</option>
-                        <option value="3">Brasil</option>
-                        <option value="3">Chile</option>
-                        <option value="3">Colombia</option>
-                        <option value="3">India</option>
-                        <option value="3">Homero</option>
-                    </select>
-                </div>
-                <div class="col-10 mt-3">
-                    <div class="form-check text-white">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                        <label class="form-check-label" for="flexCheckIndeterminate" id="label">
-                            Acepto términos y condiciones de suscripción.
-                        </label>
-                    </div>
-                </div>
-                <div class="mt-3">
-                    <input type="submit" class="btn btn-primary btn-sm boton_continuar" id="boton">>
-                </div>
-            </div>
-        </form>
-
-    </section>
 
 
-    <footer class="text-center text-primary" style="background-color: #1D1D1B">
-        <!-- Grid container -->
-        <div class="container p-4">
-            <!-- Section: Social media -->
-            <section class="mb-4">
-                <!-- Facebook -->
-                <a class="btn btn-outline-dark btn-floating m-1 text-white" href="#!" role="button"><i
-                        class="fab fa-facebook-f"></i></a>
-
-                <!-- Twitter -->
-                <a class="btn btn-outline-dark btn-floating m-1 text-white" href="#!" role="button"><i
-                        class="fab fa-twitter"></i></a>
-
-                <!-- Google -->
-                <a class="btn btn-outline-dark btn-floating m-1 text-white" href="#!" role="button"><i
-                        class="fab fa-google"></i></a>
-
-                <!-- Instagram -->
-                <a class="btn btn-outline-dark btn-floating m-1 text-white" href="#!" role="button"><i
-                        class="fab fa-instagram"></i></a>
-            </section>
-            <!-- Section: Social media -->
-
-            <!-- Section: Form -->
-            <section class="">
-                <form action="">
-                    <!--Grid row-->
-                    <div class="row d-flex justify-content-center">
-
-                        <!--Grid column-->
-                        <div class="col-6">
-                            <!-- Email input -->
-                            <div class="form-outline form-white">
-                                <input type="email" id="form5Example2" class="form-control" />
-                                <button type="submit" class="btn btn-outline-dark mt-2 text-white">
-                                    Suscribirse
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-        </div>
-        <!--Grid row-->
-        </form>
-
-        <!-- Copyright -->
-        <div class="text-center p-3 text-white" style="background-color: rgba(78, 80, 82, 0.2);">
-            © 2021 Copyright:
-            <a class="text-white" href="https://mdbootstrap.com/">Leroy</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
 
 
 
