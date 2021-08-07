@@ -159,10 +159,10 @@ body {
 .login {
     position: absolute;
     display: none;
-    left: 70.8%;
+    left: 63%;
     top: 6.7%;
     height: 470px;
-    width: 350px;
+    width: 600px;
     margin: auto;
     padding: 60px 60px;
     background: url(./imagenes/istockphoto-1152825118-170667a.jpg) no-repeat center center #505050;
@@ -334,6 +334,22 @@ body {
     text-decoration: none;
     color: rgb(248, 0, 0);
 }
+
+
+.login_register{
+    
+
+}
+
+
+
+
+
+
+
+
+
+
 /*    ----------------   -----------------     */
 
 /* Home section */
