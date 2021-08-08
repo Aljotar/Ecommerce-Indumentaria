@@ -54,6 +54,7 @@
                 </ul>
             </div>
 
+
             <!-- Offcanvas Carrito de compras-->
 
 
@@ -196,17 +197,17 @@
                     <div class="col">
                         <h2 class="active">Iniciar</h2>
                         <h2><a class="nonactive" href="./registro/registro.html">Registro</a></h2>
-                        <form>
-                            <input type="text" class="text" name="username">
+                        <form id="form">
+                            <input type="text" class="text" name="username" id="loginUsuario">
                             <span>Usuario</span>
                             <br>
                             <br>
-                            <input type="password" class="text" name="password">
+                            <input type="password" class="text" name="password" id="loginContrasena">
                             <span>Contraseña</span>
                             <br>
                             <input type="checkbox" id="checkbox-1-1" class="custom-checkbox" />
                             <label for="checkbox-1-1">Recordarme</label>
-                            <button class="signin">
+                            <button type="submit" class="signin" id="signin">
                                 Ingresar
                             </button>
                         </form>
@@ -216,7 +217,8 @@
         </div>
 
 
-
+        <div class="text-white" id="usuario_logueado">
+        </div>
 
     </div>
     <section class="informativa mt-5">

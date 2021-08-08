@@ -334,7 +334,11 @@ body {
     color: rgb(248, 0, 0);
 }
 
-
+.usuario_logueado{
+    position: absolute;
+    left: 90%;
+    top: 0;
+}
 
 
 
