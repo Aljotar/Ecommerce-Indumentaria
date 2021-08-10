@@ -393,7 +393,7 @@ body {
         display: block;
     }
     .nav div.logo {
-        margin-left: 15px;
+        margin-left: -15px;
     }
     .nav div.main_list {
         width: 100%;
@@ -684,7 +684,7 @@ body {
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 .wsk-cp-text {
-    padding-top: 150%;
+    padding-top: 105%;
 }
 .wsk-cp-text .category {
     text-align: center;
@@ -909,7 +909,8 @@ a.buy-btn {
 }
 
 .informacion {
-    height: 150px;
+    padding-left: 50px;
+    height: 350px;
     background: rgb(207, 206, 206);
     box-shadow: 1px 1px 5px rgb(156, 155, 155);
     border-top: 0.5px solid rgb(192, 190, 190);
@@ -932,7 +933,7 @@ a.buy-btn {
 }
 .footer_estilo {
     background: rgba(43, 43, 43, 0.1);
-    height: 300px;
+    height: 650px;
     box-shadow: 1px 1px 5px rgb(12, 12, 12);
 }
 .footer_lista {
@@ -989,6 +990,11 @@ a.buy-btn {
     color: rgb(58, 57, 57);
     transform: scale(1.08);
 }
+.slider_tamaño{
+    height: 350px;
+    z-index: 0;
+    position: relative;
+}
 
 .slider {
     height: 700px;
@@ -1020,7 +1026,6 @@ a.buy-btn {
 .card .content p {
     text-align: justify;
     margin: 10px 0;
-    font-size: 15px;
 }
 .card .content .btn {
     display: block;
@@ -1075,4 +1080,17 @@ a.buy-btn {
         height: 70px;
     
     }
+    .home{
+        background-image: url(./imagenes/home.jpg);
+        background-size: cover;
+        height: 350px;
+        background-position: top;
+    }
+    .wsk.cp.text{
+        padding-top: 105%;
+    }
+    .informativa{
+        height: 270px;
+    }
+
 }
