@@ -13,6 +13,9 @@
     <script src="https://kit.fontawesome.com/1bc88ff8fe.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Suez+One&display=swap"
         rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <title>Rolling Clothing</title>
 </head>
 
@@ -70,56 +73,7 @@
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Descripcion</th>
-                                <th scope="col">Precio</th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row"><img
-                                        src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/4/4/44d0003010502_2.jpg"
-                                        class="img-thumbnail" alt="..."></th>
-                                <td>
-                                    <p>Sweater regular fit</p>
-                                    <p>Talle:</p>
-                                </td>
-                                <td>$5.899</td>
-                                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-trash-fill eliminar_carrito" viewBox="0 0 16 16">
-                                        <path
-                                            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
-                                    </svg></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><img
-                                        src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/8/0/80d000019-035_2.jpg"
-                                        class="img-thumbnail" alt="..."></th>
-                                <td>
-                                    <p>Sobretodo Liso de Paño</p>
-                                    <p>Talle:</p>
-                                </td>
-                                <td>$13.899</td>
-                                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-trash-fill eliminar_carrito" viewBox="0 0 16 16">
-                                        <path
-                                            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
-                                    </svg></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-
+                <div class="offcanvas-body" id="lista_deseos">
                 </div>
             </div>
 
@@ -217,7 +171,7 @@
         </div>
 
 
-        <div class="text-white" id="usuario_logueado">
+        <div class="text-white usuario_logueado">
         </div>
 
     </div>
@@ -285,7 +239,7 @@
                             </div>
                             <div class="card-footer">
                                 <div class="wcf-left"><span class="price">$5.899</span></div>
-                                <a href="#" class="link-primary">Añadir a lista de deseos</a>
+                                <a href="#" class="link-primary add">Añadir a lista de deseos</a>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                     class="bi bi-cart" viewBox="0 0 16 16">
                                     <path
@@ -313,7 +267,7 @@
                             </div>
                             <div class="card-footer">
                                 <div class="wcf-left"><span class="price">$17.499</span></div>
-                                <a href="#" class="link-primary">Añadir a lista de deseos</a>
+                                <a href="#" class="link-primary add">Añadir a lista de deseos</a>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                     class="bi bi-cart" viewBox="0 0 16 16">
                                     <path
@@ -341,7 +295,7 @@
                             </div>
                             <div class="card-footer">
                                 <div class="wcf-left"><span class="price">$7.499</span></div>
-                                <a href="#" class="link-primary">Añadir a lista de deseos</a>
+                                <a href="#" class="link-primary add">Añadir a lista de deseos</a>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                     class="bi bi-cart" viewBox="0 0 16 16">
                                     <path
@@ -550,6 +504,102 @@
             </div>
         </div>
     </div>
+
+    <div class="accesorios mt-5 text-center">
+        <p class="mt-5">Accesorios Invierno</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col mt-5">
+                <div class="slider owl-carousel">
+                    <div class="card">
+                        <div class="img">
+                            <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/products/ef-la-arg-3-1121-b628c5388443d52c7716203432466568-480-0.jpg"
+                                alt="">
+                        </div>
+                        <div class="content text-center">
+                            <div class="title">
+                                Gorro de Lana Alfonso Verde</div>
+                            <div class="sub-title">
+                                $3.490</div>
+                            <p class="text-center">
+                                "6 cuotas sin interés"</p>
+                            <div class="btn text-center">
+                                <button>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/products/ef-la-arg-3-11311-68798933492fd3ca3e16203442457205-240-0.jpg"
+                                alt="">
+                        </div>
+                        <div class="content text-center">
+                            <div class="title">
+                                Bufanda de Lana Pedro Azul</div>
+                            <div class="sub-title text-center">
+                                $3.490</div>
+                            <p class="text-center">
+                                "6 cuotas sin interés"</p>
+                            <div class="btn text-center">
+                                <button>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/products/ef-la-arg-3-1061-315aceb684501ca11316203443444175-240-0.jpg"
+                                alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title text-center">
+                                Bufanda de Lana Pedro Violeta</div>
+                            <div class="sub-title text-center">
+                                $3.490</div>
+                            <p class="text-center">
+                                "6 cuotas sin interés"</p>
+                            <div class="btn text-center">
+                                <button>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/products/ef-la-arg-3-581-cd75b8953fc30051b316203443395920-480-0.jpg"
+                                alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title text-center">
+                                Bufanda de Lana Pedro Tiza</div>
+                            <div class="sub-title text-center">
+                                $3.490</div>
+                            <p class="text-center">
+                                "6 cuotas sin interés"</p>
+                            <div class="btn text-center">
+                                <button>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/products/ef-la-arg-3-421-a17468eb5629b6f24f16203443493559-480-0.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="title text-center">
+                                Bufanda de Lana Pedro Marrón 2</div>
+                            <div class="sub-title text-center">
+                                $3.490</div>
+                            <p class="text-center">
+                                "6 cuotas sin interés"</p>
+                            <div class="btn text-center">
+                                <button>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="informacion mt-5">
         <div class="container">
             <div class="row text-center alineado">
@@ -594,6 +644,17 @@
             </div>
         </div>
     </div>
+    <script>
+        $(".slider").owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 2000, //2000ms = 2s;
+            autoplayHoverPause: true,
+        });
+    </script>
+
+
+
     <footer class="footer_estilo mt-5">
         <div class="container">
             <div class="row">

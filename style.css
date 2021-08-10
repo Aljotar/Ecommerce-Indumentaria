@@ -146,6 +146,10 @@ body {
     color: red;
 }
 
+.carrito_comprar {
+    color: rgb(99, 185, 13);
+}
+
 /*    ----------------    Login -----------------     */
 
 .signin {
@@ -333,14 +337,10 @@ body {
     text-decoration: none;
     color: rgb(248, 0, 0);
 }
-
-.usuario_logueado{
-    position: absolute;
-    left: 90%;
-    top: 0;
+.usuario_logo .dropdown {
+    color: black;
+    background-color: cornsilk;
 }
-
-
 
 /*    ----------------   -----------------     */
 
@@ -988,4 +988,91 @@ a.buy-btn {
 .social-icon:hover {
     color: rgb(58, 57, 57);
     transform: scale(1.08);
+}
+
+.slider {
+    height: 700px;
+    max-width: 1100px;
+    display: flex;
+    margin: auto;
+}
+.slider .card {
+    flex: 7;
+    margin: 0 10px;
+    background: #fff;
+}
+.slider .card .img img {
+    object-fit: cover;
+}
+.slider .card .content {
+    padding: 10px 20px;
+}
+.card .content .title {
+    font-size: 25px;
+    font-weight: 600;
+}
+.card .content .sub-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #e74c3c;
+    line-height: 20px;
+}
+.card .content p {
+    text-align: justify;
+    margin: 10px 0;
+    font-size: 15px;
+}
+.card .content .btn {
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+}
+.card .content .btn button {
+    background: #961507;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.card .content .btn button:hover {
+    transform: scale(0.9);
+}
+
+.accesorios{
+    height: 100px;
+    background: rgb(218, 218, 218);
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #8b220d;
+    font-size: 30px;
+    box-shadow: 1px 1px 5px #160301;
+
+}
+
+@media screen and (max-width: 576px) {
+    .card .content .title {
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .card .content .sub-title {
+        font-size: 15px;
+    }
+    .card .content .btn button {
+        background: #961507;
+        color: #fff;
+        border: none;
+        outline: none;
+        font-size: 12px;
+    }
+    .slider {
+        height: 400px;
+    }
+    .accesorios{
+        height: 70px;
+    
+    }
 }

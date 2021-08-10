@@ -1,19 +1,20 @@
-const loginUsuario = document.getElementById("loginUsuario")
-const loginContrasena = document.getElementById("loginContrasena")
-const form = document.getElementById("form")
-const signin = document.getElementById("signin")
+const loginUsuario = document.getElementById("loginUsuario");
+const loginContrasena = document.getElementById("loginContrasena");
+const form = document.getElementById("form");
+const signin = document.getElementById("signin");
+
 let usuario = (JSON.parse(localStorage.getItem("usuarios")) || []);
 form.addEventListener("submit", e => {
-    e.preventDefault()
+  e.preventDefault()
 })
 signin.addEventListener("click", tomarUsuario)
 function tomarUsuario() {
-    let acceso = false;
-    for (let i = 0; i < usuario.length; i++) {
-        if (loginUsuario.value == usuario[i].usuario && loginContrasena.value == usuario[i].contrasena) {
-            acceso = true;
-            const usuarioLogueado = document.getElementById("usuario_logueado")
-            usuarioLogueado.innerHTML = `
+  let acceso = false;
+  for (let i = 0; i < usuario.length; i++) {
+    if (loginUsuario.value == usuario[i].usuario && loginContrasena.value == usuario[i].contrasena) {
+      acceso = true;
+      const usuarioLogueado = document.querySelector(".usuario_logueado")
+      usuarioLogueado.innerHTML = `
             <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
               ${usuario[i].usuario}
@@ -24,15 +25,20 @@ function tomarUsuario() {
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </div>`;
-            break;
-        }
-    }
-    if (acceso === false) {
-        alert("ertertertertert")
-        form.reset();
+          
+      form.reset();
 
-
+      break;
     }
+  }
+  if (acceso === false) {
+    alert("ertertertertert")
+    form.reset();
+  }
+  if (acceso = true){
+    const login = document.querySelector(".login");
+    login.classList.add("d-none");
+  }
 }
 
 
