@@ -348,7 +348,7 @@ body {
 
 .home {
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     background-image: url(./imagenes/sale-70off-2da_seleccionados_dvr_home_slide_2000x1106_px_1.jpg);
     background-position: center top;
     background-size: cover;
@@ -632,6 +632,7 @@ body {
     background: #d4d4d4;
     border-top: 0.5px solid rgb(175, 174, 174);
     box-shadow: 1px 1px 5px rgb(145, 145, 145);
+    padding-left: 15px;
 }
 .informativa p {
     color: #8b8b8b;
@@ -899,10 +900,12 @@ a.buy-btn {
 .titulo {
     font-size: 30px;
     font-weight: 900;
+    margin-right: 15px;
 }
 .titulo1 {
     font-size: 15px;
     color: #a8a8a8;
+    margin-right: 15px;
 }
 .ul_estilo {
     list-style: none;
@@ -1079,8 +1082,8 @@ a.buy-btn {
     .home{
         background-image: url(./imagenes/home.jpg);
         background-size: cover;
-        height: 350px;
-        background-position: top;
+        height: 310px;
+        background-position: bottom;
     }
     .wsk.cp.text{
         padding-top: 105%;
