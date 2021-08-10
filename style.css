@@ -998,10 +998,11 @@ a.buy-btn {
 
 .slider {
     height: 700px;
-    max-width: 1100px;
+    max-width: 375px;
     display: flex;
     margin: auto;
 }
+
 .slider .card {
     flex: 7;
     margin: 0 10px;
@@ -1009,9 +1010,6 @@ a.buy-btn {
 }
 .slider .card .img img {
     object-fit: cover;
-}
-.slider .card .content {
-    padding: 10px 20px;
 }
 .card .content .title {
     font-size: 25px;
@@ -1028,9 +1026,7 @@ a.buy-btn {
     margin: 10px 0;
 }
 .card .content .btn {
-    display: block;
     text-align: left;
-    margin: 10px 0;
 }
 .card .content .btn button {
     background: #961507;
