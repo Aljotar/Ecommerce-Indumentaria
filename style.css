@@ -935,15 +935,15 @@ a.buy-btn {
     font-size: 12px;
 }
 .footer_estilo {
-    background: rgba(43, 43, 43, 0.1);
+    background: rgba(248, 48, 48, 0.1);
     height: 650px;
-    box-shadow: 1px 1px 5px rgb(12, 12, 12);
+    box-shadow: 1px 1px 5px rgb(70, 70, 70);
 }
 .footer_lista {
     list-style: none;
 }
 .footer_lista_li {
-    color: #3498db;
+    color: #424242;
     font-size: 14px;
     font-family: sans-serif;
 }
@@ -956,13 +956,13 @@ a.buy-btn {
     font-weight: 700;
 }
 .footer_lista_logo {
-    color: #3498db;
+    color: #535353;
     font-size: 18px;
     font-family: sans-serif;
-    border-bottom: 2px solid #1c6ea4;
+    border-bottom: 2px solid #c02c2c;
 }
 .footer_lista_li1 {
-    color: #3498db;
+    color: #6d1010;
     font-size: 18px;
     font-family: sans-serif;
     font-weight: 700;
@@ -1045,16 +1045,39 @@ a.buy-btn {
 .card .content .btn button:hover {
     transform: scale(0.9);
 }
+.slider2 {
+    height: 700px;
+    max-width: 375px;
+    display: flex;
+    margin: auto;
+}
+
+.slider2 .card {
+    flex: 7;
+    margin: 0 10px;
+    background: #fff;
+}
+.slider2 .card .img img {
+    object-fit: cover;
+}
 
 .accesorios{
-    height: 100px;
-    background: rgb(218, 218, 218);
-    font-family: sans-serif;
-    font-weight: 700;
-    color: #8b220d;
-    font-size: 30px;
+    height: 52px;
+    width: 100%;
+    background-image: url(https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/categories/categorias-apaisado_mesa-de-trabajo-1-copia-4-categorias-apaisadas-46e87ddb3be959eddc16164439350337-240-0.png);
     box-shadow: 1px 1px 5px #160301;
+    background-repeat: no-repeat;
+    background-size: cover;
 
+}
+
+.camisas{
+    height: 52px;
+    width: 100%;
+    background-image: url(https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/categories/categorias-apaisado_mesa-de-trabajo-1-copia-2-categorias-apaisadas-1fa734e3ea28aad77416164436916357-240-0.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 1px 1px 5px #160301;
 }
 
 @media screen and (max-width: 576px) {
@@ -1074,10 +1097,6 @@ a.buy-btn {
     }
     .slider {
         height: 400px;
-    }
-    .accesorios{
-        height: 70px;
-    
     }
     .home{
         background-image: url(./imagenes/home.jpg);
