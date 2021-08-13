@@ -12,7 +12,6 @@ body {
 /* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
 
 /* Navbar section */
-
 .nav {
     width: 100%;
     height: 65px;
@@ -348,8 +347,6 @@ body {
 
 .home {
     width: 100%;
-    height: 200vh;
-    background-image: url(./imagenes/sale-70off-2da_seleccionados_dvr_home_slide_2000x1106_px_1.jpg);
     background-size: cover;
     box-shadow: 1px 1px 5px rgb(109, 109, 109);
 }
@@ -1098,16 +1095,17 @@ a.buy-btn {
         height: 400px;
     }
     .home{
-        background-image: url(./imagenes/home.jpg);
-        background-size: cover;
         height: 310px;
-        background-position: bottom;
+
     }
     .wsk.cp.text{
         padding-top: 105%;
     }
     .informativa{
         height: 270px;
+    }
+    .principal{
+        padding-top: 65px;
     }
 
 }
