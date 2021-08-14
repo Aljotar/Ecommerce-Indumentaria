@@ -1024,6 +1024,7 @@ a.buy-btn {
 .slider_tamaño{
     height: 350px;
     position: relative;
+    z-index: 0;
 
 }
 
@@ -1032,7 +1033,6 @@ a.buy-btn {
     max-width: 375px;
     display: flex;
     margin: auto;
-
 }
 
 .slider .card {
