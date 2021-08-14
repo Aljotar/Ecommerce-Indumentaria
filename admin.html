@@ -9,14 +9,15 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="./stylecrud.css">
+    <link rel="stylesheet" href="./admin.css">
     <title>AdminHome</title>
 </head>
 
 <body>
+
+    <!-- Formulario de productos -->
     <h1>Admin</h1>
-    <section>
-        <!-- Formulario de productos -->
+    <!-- <section>
         <form class="tamañoform">
             <div class="form-floating mb-3">
                 <input class="form-control" id="producto" placeholder="name@example.com">
@@ -31,13 +32,131 @@
                 <label for="precio">Precio</label>
             </div>
             <div class="form-floating">
-                <input  class="form-control" id="url" placeholder="Password">
+                <input class="form-control" id="url" placeholder="Password">
                 <label for="url">Url de la imagen</label>
             </div>
-            <button onclick="agregarProducto(event)" type="submit">Agregar</button>
+            <button class="btn btn-success" onclick="agregarProducto(event)" type="submit">Agregar</button>
         </form>
-        <a href="./index.html"> Volver a la pag principal</a>
+    </section>  -->
+    <!-- otro formulario -->
+    <a href="./index.html"> Volver a la pag principal</a>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button>
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-body body">
+                    <div class="">
+                        <div class="content">
+                
+                            <h1 class="logo">Rolling <span>Cloth</span></h1>
+                
+                            <div class="animated bounceInUp">
+                                <div class="contact-form">
+                                    
+                                    <form onsubmit="agregarProducto(event)">
+                                        <p>
+                                            <label>Producto</label>
+                                            <input id="producto" required maxlength="50" type="text">
+                                        </p>
+                                        <p>
+                                            <label>Descripcion</label>
+                                            <input id="descripcion" required maxlength="100" type="text">
+                                        </p>
+                                        <p>
+                                            <label>Precio</label>
+                                            <input id="precio" required max="1000000" type="number">
+                                        </p>
+                                        <p>
+                                            <label>Url</label>
+                                            <input id="url" required maxlength="200" type="text">
+                                        </p>
+                                        
+                                        <p class="btn d-flex">
+                                            <button id="btnCloseModal"  type="button" class="btn btn-secondary mx-5" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit"  class="mx-5" >
+                                                Agregar Producto
+                                            </button>
+                                        </p>
+                                    </form>
+                                </div>
+                                
+                            </div>
+                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <section>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody id="tBody">
+                <!-- <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td><button class="btn btn-primary">Editar</button><button class="btn btn-danger">Eliminar</button></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr> -->
+            </tbody>
+        </table>
     </section>
+
+    <section>
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel2">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <label class="d-block" for="modalProducto">Producto</label>
+                            <input class="d-block" id="modalProducto" type="text">
+                            <label class="d-block" for="modalPrecio">Precio</label>
+                            <input class="d-block" id="modalPrecio" type="text">
+                            <label class="d-block" for="modalDescripcion" for="">Descripcion</label>
+                            <input class="d-block" id="modalDescripcion" type="text">
+                            <label class="d-block" for="modalUrl" for="">Url</label>
+                            <input class="d-block" id="modalUrl" type="text">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="editarProducto()" class="btn btn-success">Guardar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

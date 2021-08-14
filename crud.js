@@ -2,28 +2,33 @@ const productoImput = document.getElementById("producto")
 const descripcionImput = document.getElementById("descripcion")
 const precioImput = document.getElementById("precio")
 const urlImput = document.getElementById("url")
+// const tbody = document.getElementById("tBody")
+const modalProducto = document.getElementById("modalProducto")
+const modalPrecio = document.getElementById("modalPrecio")
+const modalDescripcion = document.getElementById("modalDescripcion")
+const modalUrl = document.getElementById("modalUrl")
+const btnCloseModal = document.getElementById("btnCloseModal")
 
 let productos = JSON.parse(localStorage.getItem("products")) || [];
 
-let ID = 0;
+let id = 0;
 
 function agregarProducto(event) {
-    console.log("agregarProducto")
     event.preventDefault()
     const producto = productoImput.value;
     const descripcion = descripcionImput.value;
     const precio = precioImput.value
     const url = urlImput.value
 
-    ID++
+    
     const nuevoProducto = {
         producto: producto,
         descripcion: descripcion,
         precio: precio,
         url: url,
-        ID:ID,
+        id: id,
     }
-
+    id++
     // productos = [...productos, nuevoProducto]
     productos.push(nuevoProducto)
 
@@ -31,46 +36,65 @@ function agregarProducto(event) {
 
     localStorage.setItem("products", productosJson)
 
-
-}
-
-function listarProductos() {
-    const container = document.getElementById("producto-cards");
+    event.target.reset();
     
+    btnCloseModal.click();
 
-    productos.map((product, index)=>{
 
-        container.innerHTML+=`
-        <div class="col-md-3">
-            <div class="wsk-cp-product">
-                <div class="wsk-cp-img">
-                    <img src="${product.url}"
-                        alt="Product" class="img-responsive" />
-                </div>
-                <div class="wsk-cp-text">
-                    <div class="category">
-                        <button type="button" class="btn btn-primary compra">Comprar</button>
-                    </div>
-                    <div class="title-product">
-                        <h3>${product.producto}</h3>
-                    </div>
-                    <div class="description-prod">
-                        <p>${product.descripcion}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="wcf-left"><span class="price">$${product.precio}</span></div>
-                        <a href="#" class="link-primary">Añadir a lista de deseos</a>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            class="bi bi-cart" viewBox="0 0 16 16">
-                            <path
-                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>`
-    })
+
+
+    listarEnTabla()
+    
 }
 
-listarProductos();
 
+
+
+
+function listarEnTabla() {
+
+    const tablaAdmin = document.getElementById("tBody")
+    const filasProducto = productos.map((p, index) =>`                                               
+        <tr>
+            <th scope="row">${index+1}</th>
+            <td>${p.producto}</td>
+            <td>${p.precio}</td>
+            <td>${p.descripcion}</td>
+            <td><button onclick = "setearIdModal(${p.id})" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">Editar</button><button onclick ="eliminarProducto(${p.id})" class="btn btn-danger mx-1">eliminar</button></td>
+        </tr>`
+    )
+    tablaAdmin.innerHTML = filasProducto.join("");
+    console.log(tablaAdmin)
+    console.log(productos)
+}
+function eliminarProducto(id) {
+    const productosFiltrados = productos.filter(producto => id !== producto.id);
+    productos = productosFiltrados;
+    localStorage.setItem("products", JSON.stringify(productos))
+    listarEnTabla();
+}
+
+let idModal = "";
+function setearIdModal(id){
+    idModal= id;
+}
+
+
+function editarProducto() {
+    console.log("productos antes: ", productos)
+    const producto = productos.find((producto) => idModal === producto.id)
+    const productoEditado = {...producto, producto: modalProducto.value, precio:modalPrecio.value, descripcion:modalDescripcion.value, url:modalUrl.value}
+    function productoEditadoMap(producto){
+        if (producto.id===productoEditado.id) {
+            return ({...producto, ...productoEditado})
+        } else {
+            return producto
+        }
+    }
+    const productosActualizados = productos.map(productoEditadoMap)
+    productos=productosActualizados;
+    localStorage.setItem("products", JSON.stringify(productos))
+    listarEnTabla();
+}
+
+listarEnTabla()
