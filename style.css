@@ -668,6 +668,12 @@ body {
     font-family: sans-serif;
 }
 
+.promociones img:hover{
+    transition: 1.5s;
+    transform: scale(1.03);
+    opacity: 0.7;
+}
+
 .shell {
     padding: 30px 0;
 }
