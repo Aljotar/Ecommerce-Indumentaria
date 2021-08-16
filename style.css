@@ -1000,6 +1000,9 @@ a.buy-btn {
     font-family: sans-serif;
     font-weight: 700;
 }
+.footer{
+    align-self: center;
+}
 
 /* Social Icons */
 .social-icons {
