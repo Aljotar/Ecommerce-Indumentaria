@@ -97,4 +97,12 @@ function editarProducto() {
     listarEnTabla();
 }
 
+
+window.addEventListener("DOMContentLoaded", mostrar);
+function mostrar() {
+    let animacion = document.querySelector('.fondotabla');
+    animacion.style.animation = 'logo 1s ease-in-out';
+
+}
+
 listarEnTabla()

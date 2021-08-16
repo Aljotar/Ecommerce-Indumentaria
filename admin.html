@@ -13,10 +13,12 @@
     <title>AdminHome</title>
 </head>
 
-<body>
+<body class="fondo">
 
     <!-- Formulario de productos -->
-    <h1>Admin</h1>
+    <div class="d-flex justify-content-center align-items-center">
+    <div class="w-25 mt-3 p-2 fondo-logo"><h1 class="logo">Rolling <span>Cloth</span></h1></div>
+    </div>
     <!-- <section>
         <form class="tamañoform">
             <div class="form-floating mb-3">
@@ -39,23 +41,25 @@
         </form>
     </section>  -->
     <!-- otro formulario -->
-    <a href="./index.html"> Volver a la pag principal</a>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-    </button>
-    
+    <div class="container d-flex justify-content-center">
+        <button class="btn btn-secondary mx-3"><a href="./index.html"> Volver a la pag principal</a></button>
+        <button type="button" class="btn btn-primary mx-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Agregar Producto
+        </button>
+    </div>
+
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-body body">
                     <div class="">
                         <div class="content">
-                
+                            
                             <h1 class="logo">Rolling <span>Cloth</span></h1>
-                
+                            
                             <div class="animated bounceInUp">
                                 <div class="contact-form">
-                                    
+
                                     <form onsubmit="agregarProducto(event)">
                                         <p>
                                             <label>Producto</label>
@@ -73,18 +77,19 @@
                                             <label>Url</label>
                                             <input id="url" required maxlength="200" type="text">
                                         </p>
-                                        
+
                                         <p class="btn d-flex">
-                                            <button id="btnCloseModal"  type="button" class="btn btn-secondary mx-5" data-bs-dismiss="modal">Close</button>
-                                            <button type="submit"  class="mx-5" >
+                                            <button id="btnCloseModal" type="button" class="btn btn-secondary mx-5"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="mx-5">
                                                 Agregar Producto
                                             </button>
                                         </p>
                                     </form>
                                 </div>
-                                
+
                             </div>
-                
+
                         </div>
                     </div>
                 </div>
@@ -92,9 +97,9 @@
         </div>
     </div>
 
-    
 
-    <section>
+
+    <section class="fondotabla">
         <table class="table">
             <thead>
                 <tr>
@@ -130,7 +135,8 @@
     </section>
 
     <section>
-        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+            aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
