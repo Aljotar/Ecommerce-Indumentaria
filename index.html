@@ -10,58 +10,205 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
-    <title>Hello, world!</title>
+    <script src="https://kit.fontawesome.com/1bc88ff8fe.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Suez+One&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <title>Rolling Clothing</title>
 </head>
 
 <body>
-
-    <nav class="nav">
-        <div class="container">
-            <div class="logo">
+    <div class="superior text-center pt-2">
+        <span><strong>12 CUOTAS SIN INTERÉS</strong> EN COMPRAS SUPERIORES A $12.599 || ENVÍO<strong> GRATIS</strong> A
+            TODO EL PAÍS EN COMPRAS SUPERIORES A $6.500 |</span>
+    </div>
+    <nav class="nav p-0">
+        <div class="p-0">
+            <div class="logo d-flex">
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-code"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z" />
+                    </svg></p>
                 <a href="#">Rolling Clothing</a>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" fill="currentColor"
+                        class="bi bi-code-slash" viewBox="0 0 16 16">
+                        <path
+                            d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                    </svg></p>
             </div>
             <div id="mainListDiv" class="main_list">
-                <ul class="navlinks">
-                    <li><a href="./admin.html">Coleccion</a></li>
+                <ul class="navlinks nav_menu">
+                    <li class="menu3"><a id="menu2" href="./admin.html">Coleccion</a></li>
                     <li><a href="#">Accesorios</a></li>
                     <li><a href="#">Sale</a></li>
                     <li><a href="#">Locales</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li id="contacto"><a href="#">Contacto</a></li>
                     <li><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                             class="bi bi-person usuario_logo" viewBox="0 0 16 16">
                             <path
                                 d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
                         </svg></li>
-                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
-                                class="bi bi-bag mb-3" viewBox="0 0 16 16">
+                    <li id="carrito"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                fill="currentColor" class="bi bi-bag mb-3 position-relative" viewBox="0 0 16 16"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                aria-controls="offcanvasRight">
                                 <path
                                     d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
                             </svg></a></li>
                 </ul>
+                <!-- Offcanvas Carrito de compras-->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="" id="offcanvasRightLabel"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg></h5>
+                        <p>Carrito de compras</p>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" id="lista_deseos">
+                    </div>
+                </div>
+
+                <!-- ---------------------- -->
+
+
+                <span class="navTrigger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
             </div>
-            <span class="navTrigger">
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
-        </div>
     </nav>
-    <div class="home"></div>
-
-    <section class="informativa mt-5">
-
+    <div class="home">
+        <div id="carouselExampleIndicators" class="carousel slide principal" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://d2o0alvqrq3i9e.cloudfront.net/media/wysiwyg/NuevaDevre/Recurrentes/uala_dvr-06_01.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./imagenes/sale-70off-2da_seleccionados_dvr_home_slide_2000x1106_px_1.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <ul class="menu_interno d-none">
+            <div class="">
+                <div class="row">
+                    <div class="col d-flex p-3 mt-5 text-white">
+                        <ul>
+                            <li>Abrigos & Camperas</li>
+                            <li>Sweaters</li>
+                            <li>Camisas</li>
+                            <li>Pantalones</li>
+                            <li>Jeans</li>
+                        </ul>
+                        <ul>
+                            <li>Buzos</li>
+                            <li>Trajes</li>
+                            <li>Sacos</li>
+                            <li>Remeras</li>
+                            <li>Chombas</li>
+                        </ul>
+                        <ul>
+                            <li>Calzados</li>
+                            <li>Ropa Interior</li>
+                            <li>Bermudas</li>
+                            <li>Remeras</li>
+                            <li>Accesorios</li>
+                        </ul>
+                    </div>
+                    <div class="col menu_interno1">
+                        <p class="destacados text-center mt-1">Destacados</p>
+                        <div class="card text-white">
+                            <img src="https://d2o0alvqrq3i9e.cloudfront.net/media/wysiwyg/NuevaDevre/agosto2021/dvr_nightsale_30off_sitio-online_home_carrusel_hito_1300x300_px_1.jpg"
+                                class="card-img" alt="...">
+                        </div>
+                        <div class="card text-white mt-1">
+                            <img src="https://d2o0alvqrq3i9e.cloudfront.net/media/wysiwyg/NuevaDevre/julio2021/sale-2da60off-seleccionados_dvr_cuotas_2500x834_px_1.jpg"
+                                class="card-img" alt="...">
+                        </div>
+                    </div>
+                    <div class="col d-flex">
+                        <div class="list-group">
+                            <p class="destacados text-center mt-3">Nuestros Locales</p>
+                            <div class="d-flex">
+                                <div class="card text-white mt-3">
+                                    <img src="https://d2o0alvqrq3i9e.cloudfront.net/media/wysiwyg/store/locales_600x600_px3.jpg"
+                                        class="card-img" alt="...">
+                                </div>
+                                <div class="card text-white mt-3">
+                                    <img src="https://d2o0alvqrq3i9e.cloudfront.net/media/wysiwyg/store/locales_600x600_px4.jpg"
+                                        class="card-img" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        <div class="login">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="active">Iniciar</h2>
+                        <h2><a class="nonactive" href="./registro/registro.html">Registro</a></h2>
+                        <form id="form">
+                            <input type="text" class="text" name="username" id="loginUsuario">
+                            <span>Usuario</span>
+                            <br>
+                            <br>
+                            <input type="password" class="text" name="password" id="loginContrasena">
+                            <span>Contraseña</span>
+                            <br>
+                            <input type="checkbox" id="checkbox-1-1" class="custom-checkbox" />
+                            <label for="checkbox-1-1">Recordarme</label>
+                            <button type="submit" class="signin" id="signin">
+                                Ingresar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-white usuario_logueado">
+        </div>
+    </div>
+    <section class="informativa mt-5 text-center">
         <div class="container">
             <div class="row">
-                <div class="col d-flex mt-5">
+                <div class="col-3 d-flex mt-3 flex-wrap">
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                         class="bi bi-truck" viewBox="0 0 16 16">
                         <path
                             d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
                     </svg>
-                    <p class="p-3">Envíos a todo el país</p>
+                    <p class="">Envíos a todo el país</p>
                 </div>
-                <div class="col d-flex mt-5">
+                <div class="col-3 d-flex mt-3 flex-wrap">
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                         class="bi bi-shield-check" viewBox="0 0 16 16">
                         <path
@@ -71,7 +218,7 @@
                     </svg>
                     <p class="p-3">Compra protegida</p>
                 </div>
-                <div class="col d-flex mt-5">
+                <div class="col-3 d-flex mt-3 flex-wrap">
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                         class="bi bi-credit-card" viewBox="0 0 16 16">
                         <path
@@ -80,9 +227,9 @@
                     </svg>
                     <p class="p-3">Todos los medios de pago</p>
                 </div>
-                <div class="col d-flex mt-4 p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor"
-                        class="bi bi-house" viewBox="0 0 16 16">
+                <div class="col-3 d-flex mt-2 p-1 flex-wrap">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="55" fill="currentColor"
+                        class="bi bi-house login_mostrar" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
                         <path fill-rule="evenodd"
@@ -92,39 +239,291 @@
                 </div>
             </div>
         </div>
-
     </section>
+
+    <div class="container promociones mt-4">
+        <div class="row">
+            <div class="col-6 col-sm-4 p-3">
+                <img src="https://d2o0alvqrq3i9e.cloudfront.net/media/wysiwyg/NuevaDevre/julio2021/sale_dvr_home_precios_800x1230_px_4.jpg"
+                    class="img-fluid" alt="...">
+            </div>
+            <div class="col-6 col-sm-4 p-3">
+                <img src="https://d2o0alvqrq3i9e.cloudfront.net/media/wysiwyg/NuevaDevre/julio2021/sale_dvr_home_precios_800x1230_px_6.jpg"
+                    class="img-fluid" alt="...">
+            </div>
+            <div class="col-6 col-sm-4 p-3">
+                <img src="https://d2o0alvqrq3i9e.cloudfront.net/media/wysiwyg/NuevaDevre/julio2021/sale_dvr_home_precios_800x1230_px_2.jpg"
+                    class="img-fluid" alt="...">
+            </div>
+            <div class="col-6 col-sm-4 p-3">
+                <img src="https://d2o0alvqrq3i9e.cloudfront.net/media/wysiwyg/NuevaDevre/julio2021/sale_dvr_home_precios_800x1230_px_3.jpg"
+                    class="img-fluid" alt="...">
+            </div>
+            <div class="col-6 col-sm-4 p-3">
+                <img src="https://d2o0alvqrq3i9e.cloudfront.net/media/wysiwyg/NuevaDevre/julio2021/sale_dvr_home_precios_800x1230_px_5.jpg"
+                    class="img-fluid" alt="...">
+            </div>
+            <div class="col-6 col-sm-4 p-3">
+                <img src="https://d2o0alvqrq3i9e.cloudfront.net/media/wysiwyg/NuevaDevre/julio2021/sale_dvr_home_precios_800x1230_px_1.jpg"
+                    class="img-fluid" alt="...">
+            </div>
+        </div>
+    </div>
+
+
 
 
 
     <div class="shell">
         <div class="container">
             <div id="producto-cards" class="row">
-
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img">
+                            <img src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/4/4/44d0003010502_2.jpg"
+                                alt="Product" class="img-responsive" />
+                        </div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <button type="button" class="btn btn-primary compra">Comprar</button>
+                            </div>
+                            <div class="title-product">
+                                <h3>Sweater regular fit</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>Sweater tramado Melange escote redondo, calce regular fit.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">$5.899</span></div>
+                                <a href="#" class="link-primary add">Añadir a lista de deseos</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img
+                                src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/8/0/80d000019-035_2.jpg"
+                                alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                            <div class="title-product">
+                                <h3>Sobretodo Liso de Paño</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>Sobretodo liso de paño. Con tres botones en el frente. Con bolsillos
+                                    laterales.Sobretodo Liso de Paño </p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">$17.499</span></div>
+                                <a href="#" class="link-primary add">Añadir a lista de deseos</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img
+                                src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/0/1/01d000094-002_10_1_1.jpg"
+                                alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                            <div class="title-product">
+                                <h3>Campera Matelaseada</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>Campera de nylon matelaseada con capucha desmontable y escudo Devré en manga
+                                    izquierda. Relleno sintético. Regular Fit</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">$7.499</span></div>
+                                <a href="#" class="link-primary add">Añadir a lista de deseos</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img
+                                src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/4/4/44d000255-017-camisa-vestir-2_2.jpg"
+                                alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                            <div class="title-product">
+                                <h3>Camisa de Vestir Lisa Slim Fit</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>Camisa de vestir lisa de calce slim fit. Con cuello tipo noche. Composición 100%
+                                    Algodón.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">$4.499</span></div>
+                                <a href="#" class="link-primary">Añadir a lista de deseos</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img">
+                            <img src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/6/0/60d000105-001_3_1_2.jpg"
+                                alt="Product" class="img-responsive" />
+                        </div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                            <div class="title-product">
+                                <h3>Cardigan de calce regular.</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>Cardigan de calce regular liso con botones. De algodón, suave.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">$12.999</span></div>
+                                <a href="#" class="link-primary">Añadir a lista de deseos</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img
+                                src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/0/2/02d000099-003-1_2.jpg"
+                                alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                            <div class="title-product">
+                                <h3>Saco Slim Fit</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>Saco fantasía con puño de manga de cuatro botones. Corte Slim Fit. Cuello con ojal y
+                                    cierre con dos botones</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">$5.899</span></div>
+                                <a href="#" class="link-primary">Añadir a lista de deseos</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img
+                                src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/0/8/08d000044-002-pantal_n-de-vestir-3_2.jpg"
+                                alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                            <div class="title-product">
+                                <h3>Pantalón de Vestir Slim Fit</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>Pantalón liso sin pinzas. Corte Slim Fit. Cierre con cremallera oculta y botón. Dos
+                                    bolsillos laterales y dos abotonados en la parte posterior.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">$5.499</span></div>
+                                <a href="#" class="link-primary">Añadir a lista de deseos</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img
+                                src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/8/0/80d000021-003_8_1_2.jpg"
+                                alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                            <div class="title-product">
+                                <h3>Montgomery Liso de Paño</h3>
+                            </div>
+                            <div class="description-prod">
+                                <p>Montgomery liso de Paño. Con capucha. Con cierre y botones. Dos bolsillos delanteros.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">$5.499</span></div>
+                                <a href="#" class="link-primary">Añadir a lista de deseos</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-
-    <div class="p-5">
-        <div class="row">
-            <div class="col">
-                <div class="card text-white card-estilo">
-                    <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/themes/amazonas/img-1723215904-1616443892-4c1075d9f0f140097df5d7d4a903b77d1616443892.png?2047985143"
-                        class="card-img" alt="...">
-                </div>
+    <div class="row">
+        <div class="col">
+            <div class="card text-white card-estilo">
+                <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/themes/amazonas/img-1723215904-1616443892-4c1075d9f0f140097df5d7d4a903b77d1616443892.png?2047985143"
+                    class="card-img" alt="...">
             </div>
-            <div class="col">
-                <div class="card text-white card-estilo">
-                    <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/themes/amazonas/img-624918067-1616443893-4a01034eb106de1a4f3c72df62b13a301616443894.png?2047985143"
-                        class="card-img" alt="...">
-                </div>
+        </div>
+        <div class="col">
+            <div class="card text-white card-estilo" id="card-estilo2">
+                <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/themes/amazonas/img-624918067-1616443893-4a01034eb106de1a4f3c72df62b13a301616443894.png?2047985143"
+                    class="card-img" alt="...">
             </div>
-            <div class="col">
-                <div class="card text-white card-estilo">
-                    <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/themes/amazonas/img-1462663874-1616443895-8f98059a8bc0b8ab7ae0a9d5afb234de1616443895.png?2047985143"
-                        class="card-img" alt="...">
-                </div>
+        </div>
+        <div class="col">
+            <div class="card text-white card-estilo" id="card-estilo3">
+                <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/themes/amazonas/img-1462663874-1616443895-8f98059a8bc0b8ab7ae0a9d5afb234de1616443895.png?2047985143"
+                    class="card-img" alt="...">
             </div>
         </div>
     </div>
@@ -139,7 +538,6 @@
             <li class="titulo1">Te invitamos a conocer In Nature, an inspiring connection.</li>
         </ul>
     </div>
-
     <div class="container mt-5">
         <div class="row">
             <div class="col">
@@ -149,13 +547,13 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card text-white card2-estilo">
+                <div class="card text-white card2-estilo" id="card2-estilo1">
                     <img src="https://equus.vteximg.com.br/arquivos/ids/177258/pantalones.jpg?v=637613498615100000"
                         class="card-img" alt="...">
                 </div>
             </div>
             <div class="col">
-                <div class="card text-white card2-estilo">
+                <div class="card text-white card2-estilo" id="card2-estilo2">
                     <img src="https://equus.vteximg.com.br/arquivos/ids/177257/camisas.jpg?v=637613498785970000"
                         class="card-img" alt="...">
                 </div>
@@ -163,10 +561,200 @@
         </div>
     </div>
 
+    <div class="accesorios mt-5">
+    </div>
+    <div class="container slider_tamaño">
+        <div class="row">
+            <div class="col mt-5">
+                <div class="slider owl-carousel">
+                    <div class="card">
+                        <div class="img">
+                            <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/products/ef-la-arg-3-1121-b628c5388443d52c7716203432466568-480-0.jpg"
+                                alt="">
+                        </div>
+                        <div class="content text-center">
+                            <div class="title">
+                                Gorro de Lana Alfonso Verde</div>
+                            <div class="sub-title">
+                                $3.490</div>
+                            <p class="text-center">
+                                "6 cuotas sin interés"</p>
+                            <div class="btn text-center">
+                                <button>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/products/ef-la-arg-3-11311-68798933492fd3ca3e16203442457205-240-0.jpg"
+                                alt="">
+                        </div>
+                        <div class="content text-center">
+                            <div class="title">
+                                Bufanda de Lana Pedro Azul</div>
+                            <div class="sub-title text-center">
+                                $3.490</div>
+                            <p class="text-center">
+                                "6 cuotas sin interés"</p>
+                            <div class="btn text-center">
+                                <button>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/products/ef-la-arg-3-1061-315aceb684501ca11316203443444175-240-0.jpg"
+                                alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title text-center">
+                                Bufanda de Lana Pedro Violeta</div>
+                            <div class="sub-title text-center">
+                                $3.490</div>
+                            <p class="text-center">
+                                "6 cuotas sin interés"</p>
+                            <div class="btn text-center">
+                                <button>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/products/ef-la-arg-3-581-cd75b8953fc30051b316203443395920-480-0.jpg"
+                                alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title text-center">
+                                Bufanda de Lana Pedro Tiza</div>
+                            <div class="sub-title text-center">
+                                $3.490</div>
+                            <p class="text-center">
+                                "6 cuotas sin interés"</p>
+                            <div class="btn text-center">
+                                <button>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img
+                                src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/products/ef-la-arg-3-421-a17468eb5629b6f24f16203443493559-480-0.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="title text-center">
+                                Bufanda de Lana Pedro Marrón 2</div>
+                            <div class="sub-title text-center">
+                                $3.490</div>
+                            <p class="text-center">
+                                "6 cuotas sin interés"</p>
+                            <div class="btn text-center">
+                                <button>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="camisas mt-5 text-center">
+    </div>
+    <div class="container slider_tamaño">
+        <div class="row">
+            <div class="col mt-5">
+                <div class="slider2 owl-carousel">
+                    <div class="card">
+                        <div class="img">
+                            <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/products/ef-redes-1451-fd080d914c9f780b4b16225806922237-480-0.jpg"
+                                alt="">
+                        </div>
+                        <div class="content text-center">
+                            <div class="title">
+                                Camisa Entallada Napoleon 116</div>
+                            <div class="sub-title">
+                                $6.490</div>
+                            <p class="text-center">
+                                "6 cuotas sin interés"</p>
+                            <div class="btn text-center">
+                                <button>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/products/ef-redes-561-7930b8fb8796832b7f16225773888043-480-0.jpg"
+                                alt="">
+                        </div>
+                        <div class="content text-center">
+                            <div class="title">
+                                Camisa Semi Entallada Enrique 306</div>
+                            <div class="sub-title text-center">
+                                $6.490</div>
+                            <p class="text-center">
+                                "6 cuotas sin interés"</p>
+                            <div class="btn text-center">
+                                <button>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/products/ef-redes-991-2c1eda460dc6508bf716225799024932-480-0.jpg"
+                                alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title text-center">
+                                Camisa Entallada Napoleon Azul</div>
+                            <div class="sub-title text-center">
+                                $6.490</div>
+                            <p class="text-center">
+                                "6 cuotas sin interés"</p>
+                            <div class="btn text-center">
+                                <button>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/products/ef-redes-72-67010ab021d24c203416225816391916-480-0.jpg"
+                                alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title text-center">
+                                Bufanda de Lana Pedro Tiza</div>
+                            <div class="sub-title text-center">
+                                $6.490</div>
+                            <p class="text-center">
+                                "6 cuotas sin interés"</p>
+                            <div class="btn text-center">
+                                <button>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img
+                                src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/products/ef-jul-21-1141-f9f149fcc4bbff0a6d16279174055869-480-0.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="title text-center">
+                                Camisa Entallada Napoleon 125</div>
+                            <div class="sub-title text-center">
+                                $6.490</div>
+                            <p class="text-center">
+                                "6 cuotas sin interés"</p>
+                            <div class="btn text-center">
+                                <button>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="informacion mt-5">
         <div class="container">
-            <div class="row text-center">
-                <div class="col info_1 mt-5">
+            <div class="row text-center alineado">
+                <div class="col-5 info_1 mt-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-geo-alt-fill m-3" viewBox="0 0 16 16">
                         <path
@@ -175,16 +763,16 @@
                     <p class="mt-3 info_2">LOCALES</p>
                     <p class="info_3">Conoce el local mas cercano</p>
                 </div>
-                <div class="col info_1 mt-5 p-3">
+                <div class="col-5 mt-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-question-lg" viewBox="0 0 16 16">
                         <path
                             d="M3 4.075a.423.423 0 0 0 .43.44H4.9c.247 0 .442-.2.475-.445.159-1.17.962-2.022 2.393-2.022 1.222 0 2.342.611 2.342 2.082 0 1.132-.668 1.652-1.72 2.444-1.2.872-2.15 1.89-2.082 3.542l.005.386c.003.244.202.44.446.44h1.445c.247 0 .446-.2.446-.446v-.188c0-1.278.487-1.652 1.8-2.647 1.086-.826 2.217-1.743 2.217-3.667C12.667 1.301 10.393 0 7.903 0 5.645 0 3.17 1.053 3.001 4.075zm2.776 10.273c0 .95.758 1.652 1.8 1.652 1.085 0 1.832-.702 1.832-1.652 0-.985-.747-1.675-1.833-1.675-1.04 0-1.799.69-1.799 1.675z" />
                     </svg>
-                    <p class="mt-3 info_2">AYUDA</p>
+                    <p class="mt-4 pt-2 info_2">AYUDA</p>
                     <p class="info_3">Dudas o consultas</p>
                 </div>
-                <div class="col info_1 mt-5 p-3">
+                <div class="col-5 info_1 mt-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-envelope" viewBox="0 0 16 16">
                         <path
@@ -195,7 +783,7 @@
                         id="newsletter" title="Suscríbase a nuestro boletín de noticias" placeholder="Ingresá tu e-mail"
                         class="input-text required-entry validate-email">
                 </div>
-                <div class="col mt-5 p-3">
+                <div class="col-5 mt-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-shop" viewBox="0 0 16 16">
                         <path
@@ -206,50 +794,77 @@
                 </div>
             </div>
         </div>
-
     </div>
-
+    <script>
+        $(".slider").owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 2000, //2000ms = 2s;
+            autoplayHoverPause: true,
+        });
+    </script>
+    <script>
+        $(".slider2").owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 3000, //2000ms = 2s;
+            autoplayHoverPause: true,
+        });
+    </script>
     <footer class="footer_estilo mt-5">
-
         <div class="container">
             <div class="row">
-                <div class="col footer_lista_logo mt-5">
-                    Rolling Clothing
+                <div class="col-6 footer mt-5">
+                    <p class="footer_lista_logo">Rolling Clothing</p>
                 </div>
-                <div class="col mt-5">
+                <div class="col-5 mt-5">
                     <ul class="footer_lista">
                         <li class="p-3 footer_lista_li">Inicio</li>
                         <li class="p-3 footer_lista_li">Productos</li>
-                        <li class="p-3 footer_lista_li">Quienes somos.</li>
-                        <li class="p-3 footer_lista_li">Como comprar.</li>
+                        <li class="p-3 footer_lista_li">Quienes Somos</li>
+                        <li class="p-3 footer_lista_li">Como Comprar</li>
                         <li class="p-3 footer_lista_li">Politica de Devolucion</li>
-                        <li class="p-3 footer_lista_li">Preguntas frecuentes</li>
+                        <li class="p-3 footer_lista_li">Preguntas Frecuentes</li>
                     </ul>
                 </div>
-                <div class="col">
-                    Column
+                <div class="col-6 mt-5">
+                    <ul class="footer_lista">
+                        <li class="p-3 footer_lista_li1">Contactános</li>
+                        <li class="p-3 footer_lista_li">5493814456879</li>
+                        <li class="p-3 footer_lista_li">+5493814456879</li>
+                        <li class="p-3 footer_lista_li">admcomercial@rollingclothing.com</li>
+                        <li class="p-3 footer_lista_li">Calle Falsa 123 - San Miguel de Tucumán - Tucumán</li>
+                    </ul>
                 </div>
-                <div class="col">
-                    Column
+                <div class="col-6 mt-5">
+                    <ul class="footer_lista">
+                        <li class="p-3 footer_lista_li1">Sigamos conectados</li>
+                        <div class="social-icons">
+                            <a class="social-icon social-icon--github">
+                                <i class="fa fa-github"></i>
+                                <div class="tooltip">Github</div>
+                            </a>
+                            <a class="social-icon social-icon--twitter">
+                                <i class="fa fa-twitter"></i>
+                                <div class="tooltip">Twitter</div>
+                            </a>
+                            <a class="social-icon social-icon--instagram">
+                                <i class="fa fa-instagram"></i>
+                                <div class="tooltip">Instagram</div>
+                            </a>
+                            <a class="social-icon social-icon--facebook">
+                                <i class="fa fa-facebook"></i>
+                                <div class="tooltip">Facebook</div>
+                            </a>
+                        </div>
+                    </ul>
                 </div>
             </div>
         </div>
-
-
-
     </footer>
-
-
-
-
-
-
-
-
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="app.js"></script>
+    <script src="/login.js"></script>
 
     <!-- Function used to shrink nav bar removing paddings and adding black background -->
     <script>
