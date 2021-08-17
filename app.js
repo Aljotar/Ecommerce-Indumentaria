@@ -132,7 +132,6 @@ function listaDeseados() {
 </table>
     `
 }
-console.log(products.url)
 
 
 

@@ -428,7 +428,11 @@ body {
     color: white;
 }
 
-
+.offcanvas1 h5{
+    color: rgb(240, 240, 240);
+    font-size: 27px;
+    font-weight: 900;
+}
 .offcanvas-header p{
     font-family: sans-serif;
     font-size: 15px;
@@ -436,6 +440,38 @@ body {
     color: rgb(39, 127, 243);
     border-bottom: 1px solid black;
 }
+.body{
+    background: linear-gradient(rgb(39, 127, 243), rgb(39, 115, 250));
+}
+.perfilNombre p{
+    font-size: 22px;
+    font-size: 700;
+    color: rgb(92, 92, 92);
+}
+.perfilNombreBg{
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 1px 1px 10px black;
+}
+.userNombre {
+    justify-content: space-around;
+}
+.userNombre p{
+    font-size: 18px;
+    font-size: 600;
+    color: rgb(26, 26, 26);
+}
+.userNombre svg{
+    color: rgb(47, 151, 3);
+}
+.perfilEmail{
+    background: rgb(243, 227, 163);
+    box-shadow: 1px 1px 5px rgb(61, 61, 61);
+}
+
+
+
+
+
 
 /* Media qurey section */
 
