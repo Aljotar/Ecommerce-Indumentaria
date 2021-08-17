@@ -1,13 +1,10 @@
 let productos = JSON.parse(localStorage.getItem("products")) || [];
-
 function listarProductos() {
     const container = document.getElementById("producto-cards");
-
     container.innerHTML = "";
     productos.forEach((product) => {
-
         container.innerHTML += `
-        <div class="col-md-3">
+        <div class="col-6 col-sm-4 col-md-3 p-2">
             <div class="wsk-cp-product">
                 <div class="wsk-cp-img">
                     <img src="${product.url}"
@@ -25,7 +22,7 @@ function listarProductos() {
                     </div>
                     <div class="card-footer">
                         <div class="wcf-left"><span class="price">$${product.precio}</span></div>
-                        <a href="#" class="link-primary">Añadir a lista de deseos</a>
+                        <a href="#" class="link-primary add">Añadir a favoritos</a>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-cart" viewBox="0 0 16 16">
                             <path
@@ -35,11 +32,6 @@ function listarProductos() {
                 </div>
             </div>
         </div>`
-
-
-
-
-
     })
 }
 listarProductos();

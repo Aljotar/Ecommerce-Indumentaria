@@ -14,32 +14,52 @@
 </head>
 
 <body class="fondo">
+    <div class="login text-center pt-5">
+        <h2>Panel del Administrador</h2>
+
+        <button class="mt-5" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+        <div id="id01" class="modal">
+
+            <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <img src="https://media.istockphoto.com/vectors/-vector-id1325406897?b=1&k=6&m=1325406897&s=170667a&w=0&h=I6KLo4jyYiIQHTRCY5Bxexi9Fv5Lsz6GdUchUulHAKE=" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" class="userNameAdmin" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" class="passAdmin" required>
+
+                    <button type="" class="botonAdmin">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
 
     <!-- Formulario de productos -->
     <div class="d-flex justify-content-center align-items-center">
-    <div class="w-25 mt-3 p-2 fondo-logo"><h1 class="logo">Rolling <span>Cloth</span></h1></div>
+        <div class="w-25 mt-3 p-2 fondo-logo">
+            <h1 class="logo">Rolling <span>Cloth</span></h1>
+        </div>
     </div>
-    <!-- <section>
-        <form class="tamañoform">
-            <div class="form-floating mb-3">
-                <input class="form-control" id="producto" placeholder="name@example.com">
-                <label for="producto">Producto</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input class="form-control" id="descripcion" placeholder="Password">
-                <label for="descripcion">Desc. del producto</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input class="form-control" id="precio" placeholder="Password">
-                <label for="precio">Precio</label>
-            </div>
-            <div class="form-floating">
-                <input class="form-control" id="url" placeholder="Password">
-                <label for="url">Url de la imagen</label>
-            </div>
-            <button class="btn btn-success" onclick="agregarProducto(event)" type="submit">Agregar</button>
-        </form>
-    </section>  -->
     <!-- otro formulario -->
     <div class="container d-flex justify-content-center">
         <button class="btn btn-secondary mx-3"><a href="./index.html"> Volver a la pag principal</a></button>
@@ -47,27 +67,25 @@
             Agregar Producto
         </button>
     </div>
-
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-body body">
                     <div class="">
                         <div class="content">
-                            
+
                             <h1 class="logo">Rolling <span>Cloth</span></h1>
-                            
+
                             <div class="animated bounceInUp">
                                 <div class="contact-form">
-
                                     <form onsubmit="agregarProducto(event)">
                                         <p>
                                             <label>Producto</label>
-                                            <input id="producto" required maxlength="50" type="text">
+                                            <input id="producto" required maxlength="24" type="text">
                                         </p>
                                         <p>
                                             <label>Descripcion</label>
-                                            <input id="descripcion" required maxlength="100" type="text">
+                                            <input id="descripcion" required maxlength="50" type="text">
                                         </p>
                                         <p>
                                             <label>Precio</label>
@@ -77,7 +95,6 @@
                                             <label>Url</label>
                                             <input id="url" required maxlength="200" type="text">
                                         </p>
-
                                         <p class="btn d-flex">
                                             <button id="btnCloseModal" type="button" class="btn btn-secondary mx-5"
                                                 data-bs-dismiss="modal">Close</button>
@@ -87,18 +104,13 @@
                                         </p>
                                     </form>
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
     <section class="fondotabla">
         <table class="table">
             <thead>
@@ -111,29 +123,9 @@
                 </tr>
             </thead>
             <tbody id="tBody">
-                <!-- <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td><button class="btn btn-primary">Editar</button><button class="btn btn-danger">Eliminar</button></td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr> -->
             </tbody>
         </table>
     </section>
-
     <section>
         <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
             aria-hidden="true">
@@ -162,16 +154,10 @@
                 </div>
             </div>
     </section>
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="./crud.js"></script>
-
-
 </body>
-
-
 
 </html>

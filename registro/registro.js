@@ -33,7 +33,6 @@ form.addEventListener("submit", e => {
     if (entrar) {
         error.innerHTML = warnings
     }
-
     else {
         alerta.classList.remove("d-none");
         alerta.classList.add("d-block")
@@ -46,9 +45,7 @@ form.addEventListener("submit", e => {
         }
         Usuarios.push(nuevoUsuario);
         localStorage.setItem("usuarios", JSON.stringify(Usuarios))
-
+        document.getElementById("form").reset();
     }
-
-
 })
 

@@ -53,7 +53,6 @@ window.addEventListener('scroll', function () {
         animacionProduct5.style.animation = 'ani_card 1.5s ease-out'
     }
 })
-
 const menuInterno = document.getElementById("menu2");
 const menu_interno = document.querySelector(".menu_interno")
 const menu3 = document.querySelector(".menu3");
@@ -80,7 +79,6 @@ function mostrarLogin() {
     login.classList.add("d-block");
 }
 const loginInterno = document.getElementById("carrito");
-
 loginInterno.addEventListener('mouseenter', ocultarMenu);
 function ocultarMenu() {
     login.classList.remove("d-block");
@@ -97,10 +95,7 @@ function ocultarMenu() {
     login.classList.remove("d-block");
     login.classList.add("d-none");
 }
-
-
-
-
+let products = JSON.parse(localStorage.getItem("products")) || [];
 const agregarDeseados = document.querySelector(".add");
 agregarDeseados.addEventListener("click", listaDeseados)
 function listaDeseados() {
@@ -117,13 +112,13 @@ function listaDeseados() {
     <tbody>
         <tr>
             <th scope="row"><img
-                    src="https://d2o0alvqrq3i9e.cloudfront.net/media/catalog/product/cache/1/small_image/590x637/9df78eab33525d08d6e5fb8d27136e95/4/4/44d0003010502_2.jpg"
+                    src="${products.url}"
                     class="img-thumbnail" alt="..."></th>
             <td>
-                <p>Sweater regular fit</p>
+                <p>${products.producto}</p>
                 <p>Talle:</p>
             </td>
-            <td>$5.899</td>
+            <td>$${products.precio}</td>
             <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-trash-fill eliminar_carrito" viewBox="0 0 16 16">
                     <path
@@ -137,6 +132,8 @@ function listaDeseados() {
 </table>
     `
 }
+console.log(products.url)
+
 
 
 

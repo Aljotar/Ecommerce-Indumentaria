@@ -8,11 +8,8 @@ const modalPrecio = document.getElementById("modalPrecio")
 const modalDescripcion = document.getElementById("modalDescripcion")
 const modalUrl = document.getElementById("modalUrl")
 const btnCloseModal = document.getElementById("btnCloseModal")
-
 let productos = JSON.parse(localStorage.getItem("products")) || [];
-
 let id = 0;
-
 function agregarProducto(event) {
     event.preventDefault()
     const producto = productoImput.value;
@@ -39,20 +36,9 @@ function agregarProducto(event) {
     event.target.reset();
     
     btnCloseModal.click();
-
-
-
-
-    listarEnTabla()
-    
+    listarEnTabla()  
 }
-
-
-
-
-
 function listarEnTabla() {
-
     const tablaAdmin = document.getElementById("tBody")
     const filasProducto = productos.map((p, index) =>`                                               
         <tr>
@@ -73,13 +59,10 @@ function eliminarProducto(id) {
     localStorage.setItem("products", JSON.stringify(productos))
     listarEnTabla();
 }
-
 let idModal = "";
 function setearIdModal(id){
     idModal= id;
 }
-
-
 function editarProducto() {
     console.log("productos antes: ", productos)
     const producto = productos.find((producto) => idModal === producto.id)
@@ -96,13 +79,27 @@ function editarProducto() {
     localStorage.setItem("products", JSON.stringify(productos))
     listarEnTabla();
 }
-
-
 window.addEventListener("DOMContentLoaded", mostrar);
 function mostrar() {
     let animacion = document.querySelector('.fondotabla');
     animacion.style.animation = 'logo 1s ease-in-out';
 
 }
-
 listarEnTabla()
+
+const admin1 = {
+    Usuario: "Admin",
+    Contraseña: "123456"
+}
+const login = document.querySelector(".login");
+const userNameAdmin = document.querySelector(".userNameAdmin");
+const passAdmin = document.querySelector(".userNameAdmin");
+const botonAdmin = document.querySelector(".botonAdmin");
+botonAdmin.addEventListener("click", loginAdmin);
+function loginAdmin() {
+    if (userNameAdmin.value == admin1.Usuario && passAdmin == admin1.Contraseña){
+        login.classList.add("d-none")
+    }
+    console.log(userNameAdmin.value)
+}
+

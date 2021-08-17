@@ -13,7 +13,7 @@ body {
 
 /* Navbar section */
 
-.superior{
+.superior {
     width: 100%;
     height: 30px;
     background: seashell;
@@ -21,16 +21,15 @@ body {
     box-shadow: 1px 1px 10px rgb(112, 112, 112);
     z-index: 1;
 }
-.superior span{
+.superior span {
     font-family: sans-serif;
     font-size: 13px;
     font-weight: 700;
     color: rgb(126, 126, 126);
 }
-.superior strong{
+.superior strong {
     color: rgb(54, 54, 54);
-} 
-
+}
 
 .nav {
     margin-top: 40px;
@@ -195,7 +194,7 @@ body {
 .login {
     position: absolute;
     display: none;
-    top: 8%;
+    top: 11.5%;
     width: 100%;
     height: 800px;
     margin: auto;
@@ -206,7 +205,7 @@ body {
     border-bottom: 0.5px solid #afafaf;
     border-radius: 0px 0px 23px 23px;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 }
 
 .login form {
@@ -406,6 +405,36 @@ body {
 }
 .usuario_logo:hover {
     color: #fa5656;
+}
+
+.usuario_logueado {
+    position: absolute;
+    left: 84%;
+    text-align: start;
+    top: 5%;
+}
+.usuario_logueado a {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+.usuario_logueado a:hover {
+    color: rgb(38, 126, 241);
+    background: white !important;
+}
+.usuario_logueado p {
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+}
+
+
+.offcanvas-header p{
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(39, 127, 243);
+    border-bottom: 1px solid black;
 }
 
 /* Media qurey section */
@@ -668,7 +697,7 @@ body {
     font-family: sans-serif;
 }
 
-.promociones img:hover{
+.promociones img:hover {
     transition: 1.5s;
     transform: scale(1.03);
     opacity: 0.7;
@@ -718,7 +747,7 @@ body {
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 .wsk-cp-text {
-    padding-top: 105%;
+    padding-top: 110%;
 }
 .wsk-cp-text .category {
     text-align: center;
@@ -741,7 +770,7 @@ body {
     -khtml-transform: translate(-50%, -50%);
 }
 .wsk-cp-text .category > button {
-    padding: 12px 30px;
+    padding: 5px 10px;
     border: 1px solid #313131;
     background: #a82121;
     color: #fff;
@@ -754,7 +783,7 @@ body {
 .wsk-cp-product:hover .wsk-cp-text .category > button {
     border-color: #ddd;
     box-shadow: none;
-    padding: 11px 28px;
+    padding: 8px 13px;
 }
 .wsk-cp-product:hover .wsk-cp-text .category {
     margin-top: 0px;
@@ -763,7 +792,7 @@ body {
     text-align: center;
 }
 .wsk-cp-text .title-product h3 {
-    font-size: 20px;
+    font-size: 11px;
     font-weight: bold;
     margin: 15px auto;
     overflow: hidden;
@@ -778,7 +807,7 @@ body {
 .wsk-cp-text .description-prod {
     text-align: center;
     width: 100%;
-    height: 62px;
+    height: auto;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -806,12 +835,12 @@ body {
     float: right;
 }
 .card-footer a {
-    font-size: 11px;
+    font-size: 10px;
     color: rgb(192, 87, 87);
 }
 
 .price {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -945,7 +974,7 @@ a.buy-btn {
 }
 
 .informacion {
-    padding-left: 50px;
+    padding-left: 40px;
     height: 350px;
     background: rgb(207, 206, 206);
     box-shadow: 1px 1px 5px rgb(156, 155, 155);
@@ -1000,6 +1029,9 @@ a.buy-btn {
     font-family: sans-serif;
     font-weight: 700;
 }
+.footer {
+    align-self: center;
+}
 
 /* Social Icons */
 .social-icons {
@@ -1027,11 +1059,10 @@ a.buy-btn {
     color: rgb(58, 57, 57);
     transform: scale(1.08);
 }
-.slider_tamaño{
-    height: 350px;
+.slider_tamaño {
+    height: 320px;
     position: relative;
     z-index: 0;
-
 }
 
 .slider {
@@ -1096,17 +1127,16 @@ a.buy-btn {
     object-fit: cover;
 }
 
-.accesorios{
+.accesorios {
     height: 52px;
     width: 100%;
     background-image: url(https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/categories/categorias-apaisado_mesa-de-trabajo-1-copia-4-categorias-apaisadas-46e87ddb3be959eddc16164439350337-240-0.png);
     box-shadow: 1px 1px 5px #160301;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
-.camisas{
+.camisas {
     height: 52px;
     width: 100%;
     background-image: url(https://d3ugyf2ht6aenh.cloudfront.net/stores/001/050/300/categories/categorias-apaisado_mesa-de-trabajo-1-copia-2-categorias-apaisadas-1fa734e3ea28aad77416164436916357-240-0.png);
@@ -1133,33 +1163,32 @@ a.buy-btn {
     .slider {
         height: 400px;
     }
-    .home{
+    .home {
         height: 300px;
         padding-top: 10.5%;
-
     }
-    .wsk.cp.text{
+    .wsk.cp.text {
         padding-top: 105%;
     }
-    .informativa{
+    .informativa {
         height: 270px;
     }
-    .principal{
+    .principal {
         padding-top: 65px;
     }
-    .superior{
+    .superior {
         width: 100%;
         height: 40px;
         background: seashell;
         box-shadow: 1px 1px 10px rgb(112, 112, 112);
     }
-    .superior span{
+    .superior span {
         font-family: sans-serif;
         font-size: 10px;
         font-weight: 700;
         color: rgb(126, 126, 126);
     }
-    .superior strong{
+    .superior strong {
         color: rgb(54, 54, 54);
     }
     .informativa {
@@ -1180,9 +1209,7 @@ a.buy-btn {
         height: 28px;
         margin-left: 27%;
     }
-    .informativa .container .row .div{
+    .informativa .container .row .div {
         align-content: center;
     }
-
-
 }
