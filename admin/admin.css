@@ -164,7 +164,7 @@ border-radius: 60px;
     position: absolute;
     z-index: 2;
 }
-.login h2{
+.login h2 {
     color: white;
 }
 
@@ -332,6 +332,18 @@ span.psw {
 .close:focus {
     color: red;
     cursor: pointer;
+}
+.login{
+    transition: 5s;
+}
+
+@keyframes login {
+    50% {
+        opacity: 0;
+    }
+}
+.alert{
+    display: none;
 }
 
 /* Add Zoom Animation */

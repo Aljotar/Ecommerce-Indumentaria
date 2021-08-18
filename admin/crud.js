@@ -91,15 +91,24 @@ const admin1 = {
     Usuario: "Admin",
     Contraseña: "123456"
 }
+const alert = document.querySelector(".alert");
 const login = document.querySelector(".login");
 const userNameAdmin = document.querySelector(".userNameAdmin");
-const passAdmin = document.querySelector(".userNameAdmin");
+const passAdmin = document.querySelector(".passAdmin");
 const botonAdmin = document.querySelector(".botonAdmin");
 botonAdmin.addEventListener("click", loginAdmin);
-function loginAdmin() {
-    if (userNameAdmin.value == admin1.Usuario && passAdmin == admin1.Contraseña){
-        login.classList.add("d-none")
+function loginAdmin(e) {
+    e.preventDefault();
+    if (userNameAdmin.value == admin1.Usuario && passAdmin.value == admin1.Contraseña){
+        login.style.animation = "login 3s ease"
+        login.classList.add("d-none");
+        document.querySelector(".modal-content").reset()
     }
-    console.log(userNameAdmin.value)
+    else{
+        alert.classList.add("d-block");
+        alert.classList.remove("d-none");
+        document.querySelector(".modal-content").reset()
+    }
+
 }
 
