@@ -55,11 +55,15 @@ body {
     font-weight: 700;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-left: 10px;
 }
 
 .nav div.logo a:hover {
     color: #ffffff;
+}
+.logoCode{
+    margin-left: 40px !important;
 }
 
 .logo {
@@ -67,6 +71,7 @@ body {
 }
 .nav div.logo svg {
     color: rgb(245, 0, 0, 0.8);
+    margin-left: 10px;
     animation: nav_ani 2.4s ease-out;
 }
 
@@ -118,7 +123,7 @@ body {
     text-decoration: none;
     color: rgb(255, 255, 255);
     line-height: 65px;
-    font-size: 2.4rem;
+    font-size: 2.5rem;
 }
 
 .nav div.main_list ul li a:hover {
@@ -409,9 +414,9 @@ body {
 
 .usuario_logueado {
     position: absolute;
-    left: 84%;
     text-align: start;
     top: 5%;
+    left: 1%;
 }
 .usuario_logueado a {
     font-size: 14px;
@@ -427,6 +432,10 @@ body {
     font-weight: 700;
     color: white;
 }
+.usuario_logueado button {
+
+    border: none;
+}
 
 .offcanvas1 h5{
     color: rgb(240, 240, 240);
@@ -441,7 +450,7 @@ body {
     border-bottom: 1px solid black;
 }
 .body{
-    background: linear-gradient(rgb(39, 127, 243), rgb(39, 115, 250));
+    background: linear-gradient(rgb(93, 96, 100), rgb(250, 30, 0));
 }
 .perfilNombre p{
     font-size: 22px;
@@ -737,6 +746,16 @@ body {
     transition: 1.5s;
     transform: scale(1.03);
     opacity: 0.7;
+}
+
+.promo h3{
+    font-size: 15px;
+    font-weight: 700;   
+}
+.promo h2{
+    font-size: 17px;
+    font-weight: bold; 
+    border-bottom: 1px solid rgb(53, 52, 52);  
 }
 
 .shell {
@@ -1057,7 +1076,7 @@ a.buy-btn {
     color: #535353;
     font-size: 18px;
     font-family: sans-serif;
-    border-bottom: 2px solid #c02c2c;
+    border-bottom: 2px solid #6d1010;
 }
 .footer_lista_li1 {
     color: #6d1010;
@@ -1179,6 +1198,18 @@ a.buy-btn {
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 1px 1px 5px #160301;
+}
+
+.locales h3{
+    color: rgb(39, 39, 39);
+    font-size: 15px;
+    font-size: 700;
+}
+.locales h2{
+    color: rgb(56, 55, 55);
+    font-size: 17px;
+    font-weight: bold;
+    border-bottom: 1px solid black;
 }
 
 @media screen and (max-width: 576px) {

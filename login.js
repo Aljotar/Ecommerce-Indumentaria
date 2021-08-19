@@ -16,7 +16,7 @@ function tomarUsuario() {
       const usuarioLogueado = document.querySelector(".usuario_logueado")
       usuarioLogueado.innerHTML =`
           <p>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+  <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
   ${usuario[i].usuario}
   </button>
 </p>
@@ -24,7 +24,7 @@ function tomarUsuario() {
   <div class="collapse collapse-horizontal" id="collapseWidthExample">
     <div class="card card-body text-black" style="width: 300px;">
     <div class="list-group">
-    <p href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    <p href="#" class="list-group-item list-group-item-action active bg-danger" aria-current="true">
     Bienvenido ${usuario[i].usuario}
     </p>
     <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight" class="list-group-item list-group-item-action bg-dark">Perfil</a>

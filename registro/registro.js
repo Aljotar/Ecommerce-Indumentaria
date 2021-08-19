@@ -27,7 +27,7 @@ form.addEventListener("submit", e => {
         entrar = true
     }
     if (contrasenalInput.value.length < 6) {
-        warnings += `Contraseña invalido <br>`
+        warnings += `Contraseña invalida <br>`
         entrar = true
     }
     if (entrar) {
