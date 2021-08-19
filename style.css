@@ -62,7 +62,7 @@ body {
 .nav div.logo a:hover {
     color: #ffffff;
 }
-.logoCode{
+.logoCode {
     margin-left: 40px !important;
 }
 
@@ -88,6 +88,7 @@ body {
 }
 
 .nav div.main_list {
+    
     height: 65px;
     float: right;
 }
@@ -122,8 +123,9 @@ body {
 .nav div.main_list ul li a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    line-height: 65px;
-    font-size: 2.5rem;
+    line-height: 60px;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
 .nav div.main_list ul li a:hover {
@@ -433,54 +435,48 @@ body {
     color: white;
 }
 .usuario_logueado button {
-
     border: none;
 }
 
-.offcanvas1 h5{
+.offcanvas1 h5 {
     color: rgb(240, 240, 240);
     font-size: 27px;
     font-weight: 900;
 }
-.offcanvas-header p{
+.offcanvas-header p {
     font-family: sans-serif;
     font-size: 15px;
     font-weight: 700;
     color: rgb(39, 127, 243);
     border-bottom: 1px solid black;
 }
-.body{
+.body {
     background: linear-gradient(rgb(93, 96, 100), rgb(250, 30, 0));
 }
-.perfilNombre p{
+.perfilNombre p {
     font-size: 22px;
     font-size: 700;
     color: rgb(92, 92, 92);
 }
-.perfilNombreBg{
+.perfilNombreBg {
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 1px 1px 10px black;
 }
 .userNombre {
     justify-content: space-around;
 }
-.userNombre p{
+.userNombre p {
     font-size: 18px;
     font-size: 600;
     color: rgb(26, 26, 26);
 }
-.userNombre svg{
+.userNombre svg {
     color: rgb(47, 151, 3);
 }
-.perfilEmail{
+.perfilEmail {
     background: rgb(243, 227, 163);
     box-shadow: 1px 1px 5px rgb(61, 61, 61);
 }
-
-
-
-
-
 
 /* Media qurey section */
 
@@ -498,22 +494,24 @@ body {
         margin-left: -15px;
     }
     .nav div.main_list {
-        width: 100%;
         height: 0;
         overflow: hidden;
+        width: 400px;
     }
     .nav div.show_list {
         height: auto;
         display: none;
     }
     .nav div.main_list ul {
+        font-weight: bold;
         flex-direction: column;
-        width: 100%;
+        width: 40%;
         height: 100vh;
         right: 0;
         left: 0;
         bottom: 0;
-        background-color: #111;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 1px 1px 7px rgb(0, 0, 0);
         /*same background color of navbar*/
         background-position: center top;
     }
@@ -524,7 +522,6 @@ body {
     .nav div.main_list ul li a {
         text-align: center;
         width: 100%;
-        font-size: 3rem;
     }
     .nav div.media_button {
         display: block;
@@ -748,14 +745,14 @@ body {
     opacity: 0.7;
 }
 
-.promo h3{
+.promo h3 {
     font-size: 15px;
-    font-weight: 700;   
+    font-weight: 700;
 }
-.promo h2{
+.promo h2 {
     font-size: 17px;
-    font-weight: bold; 
-    border-bottom: 1px solid rgb(53, 52, 52);  
+    font-weight: bold;
+    border-bottom: 1px solid rgb(53, 52, 52);
 }
 
 .shell {
@@ -847,7 +844,7 @@ body {
     text-align: center;
 }
 .wsk-cp-text .title-product h3 {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: bold;
     margin: 15px auto;
     overflow: hidden;
@@ -857,6 +854,9 @@ body {
 }
 .wsk-cp-text .description-prod p {
     margin: 0;
+    font-size: 12px;
+    color: rgb(255, 144, 144);
+    font-weight: bold;
 }
 /* Truncate */
 .wsk-cp-text .description-prod {
@@ -872,7 +872,16 @@ body {
 .card-footer {
     border-top: 1px solid #ddd;
     text-align: end;
+    padding: 0;
 }
+.card-footer button {
+    color: rgb(223, 223, 223);
+    font-weight: bold;
+    background-color: rgba(15, 15, 15, 0.5);
+    border: none;
+    box-shadow: 1px 1px 5px rgb(92, 92, 92);
+}
+
 .card-footer:after,
 .card-footer:before {
     content: "";
@@ -895,7 +904,7 @@ body {
 }
 
 .price {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
 }
 
@@ -1200,12 +1209,12 @@ a.buy-btn {
     box-shadow: 1px 1px 5px #160301;
 }
 
-.locales h3{
+.locales h3 {
     color: rgb(39, 39, 39);
     font-size: 15px;
     font-size: 700;
 }
-.locales h2{
+.locales h2 {
     color: rgb(56, 55, 55);
     font-size: 17px;
     font-weight: bold;
@@ -1231,7 +1240,7 @@ a.buy-btn {
         height: 400px;
     }
     .home {
-        height: 300px;
+        height: 20%;
         padding-top: 10.5%;
     }
     .wsk.cp.text {
@@ -1278,5 +1287,90 @@ a.buy-btn {
     }
     .informativa .container .row .div {
         align-content: center;
+    }
+    .nav div.main_list ul {
+        width: 100%;
+        background: rgb(46, 46, 46);
+    }
+}
+@media screen and (min-width: 576px) {
+    .home {
+        padding-top: 18%;
+    }
+    .superior {
+        height: 40px;
+    }
+    .superior span {
+        font-size: 11px;
+    }
+    .informativa {
+        height: 180px;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .informacion {
+        height: 210px;
+    }
+    .informacion p {
+        font-size: 25px;
+    }
+    .home{
+        padding-top: 0;
+    }
+    .nav_menu{
+        width: 500px !important;
+    } 
+    .main_list a{
+        font-size: 25px;
+    } 
+    .nav div.main_list ul li a{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .slider_tamaño{
+        height: auto;
+    }
+    .informativa .container{
+        display: contents;
+    }
+    .informativa .container .row{
+        padding: 50px;
+    }
+    .footer_estilo{
+        height: auto;
+        background-color: rgb(49, 49, 49,0.2);
+        box-shadow: 1px 1px 5px black;
+    }
+    .footer{
+        align-self: auto;
+    }
+    .footer_estilo li{
+        font-weight: 600;
+    }
+    .slider{
+        max-width: 1000px;
+    }
+    .slider2{
+        max-width: 1000px;
+    }
+    .nav{
+        justify-content: space-around;
+    }
+    .nav div .logo a{
+        font-size: 50px;
+    }
+    .superior{
+        background: rgb(245, 222, 207);
+        box-shadow: 1px 1px 5px rgb(131, 131, 131);
+    }
+    .login{
+        width: 30%;
+        height: auto;
+        left: 70%;
+        top: 10.8%;
+    }
+    .rolling{
+        font-size: 30px !important;
     }
 }
